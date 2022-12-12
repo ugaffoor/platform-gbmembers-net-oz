@@ -1,8 +1,8 @@
 require "json"
 
-space_name = "Test School"
-space_slug = "testschool"
-server = "https://testschool.gbmembers.net"
+space_name = "Mona Vale"
+space_slug = "monavale"
+server = "https://monavale.gbmembers.net"
 username = "unus@uniqconsulting.com.au"
 password = "gbfms@2021"
 
@@ -77,16 +77,16 @@ data = {
        "username" => "support.oceania@graciebarra.com",
        "password" => "xsmtpsib-2b01492ca1394d1fea406eaf708e8edcea81d6a25e034c4e58b6708f503b528e-T0gHVU91xtZGkdcr",
        "update_read_count_url" => "https://gbbilling.com.au:8443/billingservice/getCampaignImage"
+     },
+     "billingService" => {
+       "url" => "https://gbbilling.com.au:8443/billingservice"
+     },
+     "aws" => {
+       "AWSAccessKeyId" => "AKIAUJCBQQFD3YNUALWP",
+       "AWSSecretKey" => "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",
+       "Region" => "us-east-2"
      }
    },
-   "aws" => {
-     "AWSAccessKeyId" => "AKIAUJCBQQFD3YNUALWP",
-     "AWSSecretKey" => "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",
-     "Region" => "us-east-2"
-   },
-   "billingService" => {
-     "url" => "https://gbbilling.com.au:8443/billingservice"
-   }
 }
 
 #puts "data:#{data}"
