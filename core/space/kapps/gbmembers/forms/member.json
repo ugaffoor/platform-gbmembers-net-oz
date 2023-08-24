@@ -2430,6 +2430,6 @@
   ],
   "slug": "member",
   "status": "New",
-  "submissionLabelExpression": "${values('Member ID')} - ${values('Billing Customer Reference')} - ${values('Opt-Out')}",
+  "submissionLabelExpression": "${values('Member ID')}",
   "type": "Content"
 }

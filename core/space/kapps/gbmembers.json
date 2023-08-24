@@ -40,7 +40,7 @@
     {
       "name": "Kinetic Email Server URL",
       "values": [
-        "https://gbbilling.com.au:8443/mail-handler"
+        "https://services.gbmembers.net/mail-handler2"
       ]
     },
     {
@@ -196,15 +196,6 @@
   ],
   "slug": "gbmembers",
   "webApis": [
-    {
-      "method": "POST",
-      "securityPolicies": [
-        {
-          "endpoint": "Execution",
-          "name": "Authenticated Users"
-        }
-      ],
-      "slug": "billing-transaction"
-    }
+
   ]
 }

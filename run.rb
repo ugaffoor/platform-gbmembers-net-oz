@@ -2,9 +2,9 @@ require "json"
 
 space_name = "GBMembers Template"
 space_slug = "gbmembers-template"
-server = "https://gbmembers-template.kinops.io"
-username = "unus.gaffoor@kineticdata.com"
-password = "gbfms@2018"
+server = "https://gbmembers-template.gbmembers.net"
+username = "unus@uniqconsulting.com.au"
+password = "gbfms@2021"
 
 data = {
 "core" => {

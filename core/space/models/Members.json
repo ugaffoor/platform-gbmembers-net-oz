@@ -8,10 +8,28 @@
       "name": "Admin Fee"
     },
     {
+      "name": "Biller Migrated"
+    },
+    {
       "name": "Billing Customer Id"
     },
     {
       "name": "Billing Customer Reference"
+    },
+    {
+      "name": "Billing Family Members"
+    },
+    {
+      "name": "Billing Parent Member"
+    },
+    {
+      "name": "Billing Payment Type"
+    },
+    {
+      "name": "Billing Period"
+    },
+    {
+      "name": "Billing Start Date"
     },
     {
       "name": "Billing User"
@@ -38,7 +56,13 @@
       "name": "Emergency Contact Relationship"
     },
     {
+      "name": "Family Fee Details"
+    },
+    {
       "name": "First Name"
+    },
+    {
+      "name": "First Payment"
     },
     {
       "name": "Gender"
@@ -71,7 +95,19 @@
       "name": "Next Schedule Promotion"
     },
     {
+      "name": "Non Paying"
+    },
+    {
+      "name": "Payment"
+    },
+    {
+      "name": "Payment Method"
+    },
+    {
       "name": "Phone Number"
+    },
+    {
+      "name": "POS Profile ID"
     },
     {
       "name": "Postcode"
@@ -84,6 +120,9 @@
     },
     {
       "name": "Ranking Program"
+    },
+    {
+      "name": "Setup Fee"
     },
     {
       "name": "State"
@@ -213,8 +252,60 @@
           "structureField": "${fields('values[Max Weekly Classes]')}"
         },
         {
+          "name": "Payment",
+          "structureField": "${fields('values[Payment]')}"
+        },
+        {
+          "name": "First Payment",
+          "structureField": "${fields('values[First Payment]')}"
+        },
+        {
+          "name": "Billing Period",
+          "structureField": "${fields('values[Billing Period]')}"
+        },
+        {
+          "name": "Billing Start Date",
+          "structureField": "${fields('values[Billing Start Date]')}"
+        },
+        {
+          "name": "Payment Method",
+          "structureField": "${fields('values[Payment Method]')}"
+        },
+        {
           "name": "Admin Fee",
           "structureField": "${fields('values[Admin Fee]')}"
+        },
+        {
+          "name": "Setup Fee",
+          "structureField": "${fields('values[Setup Fee]')}"
+        },
+        {
+          "name": "Billing Parent Member",
+          "structureField": "${fields('values[Billing Parent Member]')}"
+        },
+        {
+          "name": "Non Paying",
+          "structureField": "${fields('values[Non Paying]')}"
+        },
+        {
+          "name": "Billing Family Members",
+          "structureField": "${fields('values[Billing Family Members]')}"
+        },
+        {
+          "name": "Family Fee Details",
+          "structureField": "${fields('values[Family Fee Details]')}"
+        },
+        {
+          "name": "Biller Migrated",
+          "structureField": "${fields('values[Biller Migrated]')}"
+        },
+        {
+          "name": "Billing Payment Type",
+          "structureField": "${fields('values[Billing Payment Type]')}"
+        },
+        {
+          "name": "POS Profile ID",
+          "structureField": "${fields('values[POS Profile ID]')}"
         }
       ],
       "bridgeSlug": "kinetic-core",
@@ -230,7 +321,7 @@
         },
         {
           "name": "Get Billing Members",
-          "query": "kappSlug=gbmembers&formSlug=member&q=values[Billing User]=\"YES\" AND values[Status]=\"Active\""
+          "query": "kappSlug=gbmembers&formSlug=member&q=values[Billing User]=\"YES\" AND (values[Status]=\"Active\" OR values[Status]=\"Frozen\" OR values[Status]=\"Pending Freeze\" OR values[Status]=\"Pending Cancellation\")"
         },
         {
           "name": "Get Frozen Members",
@@ -243,6 +334,10 @@
         {
           "name": "Get Active and Frozen Members",
           "query": "kappSlug=gbmembers&formSlug=member&q=values[Status]=\"Active\" OR  values[Status]=\"Frozen\" OR values[Status]=\"Pending Freeze\" OR values[Status]=\"Pending Cancellation\""
+        },
+        {
+          "name": "Get Pending Cancellation Members",
+          "query": "kappSlug=gbmembers&formSlug=member&q=values[Status]=\"Pending Cancellation\""
         }
       ],
       "structure": "Submissions"
@@ -295,6 +390,13 @@
         }
       ],
       "resultType": "Single"
+    },
+    {
+      "name": "Get Pending Cancellation Members",
+      "parameters": [
+
+      ],
+      "resultType": "Multiple"
     }
   ],
   "status": "Active"

@@ -271,7 +271,7 @@
                   "name": "Get Members",
                   "type": "Change",
                   "action": "Custom",
-                  "code": "K('bridgedResource[Get Member]').load({\n  attributes: ['Member ID', 'First Name', 'Last Name'],\n  values: {'ID' : 'Allen'},\n  success: function(bridgedData) {\n debugger;   \n    if (bridgedData===null) return;\n    K('field[Member GUID]').value(bridgedData['id']);\n    K('field[Member ID]').value(bridgedData['Member ID']);\n    K('field[Student First Name]').value(bridgedData['First Name']);\n    K('field[Student Last Name]').value(bridgedData['Last Name']);\n    K('field[Birthday]').value(bridgedData['DOB']);\n    K('field[Billing Customer Id]').value(bridgedData['Billing Customer Id']);\ndebugger;    \n    K('section[Student Information]').show();\n    if ($(K(\"form\").find(\"#firstinstallmentdate\")[0]).html()===\"\") {\n      var tomorrow = new Date((new Date()).getTime() + 24 * 60 * 60 * 1000);\n      bundle.config.widgets.xdsoftDatepicker({\n        element: K(\"form\").find(\"#firstinstallmentdate\")[0],\n        timepicker: false,\n        displayDateFormat: \"DD/MM/YYYY\",\n        options: {\n          startDate: tomorrow,\n          minDate: 0,\n          formatDate:\"d-m-Y\",\n          validateOnBlur:false\n        },\n        onSelectDate:function(ct,$i){\n          K('field[The first instalment is due on]').value(ct.dateFormat('YYYY-MM-DD'));\n        },\n        onGenerate: function( ct ){\n              $('.xdsoft_today')\n                .addClass('xdsoft_disabled');\n              $('.xdsoft_date.xdsoft_weekend')\n                .addClass('xdsoft_disabled');\n            }\n      });          \n    }\n  }\n});",
+                  "code": "K('bridgedResource[Get Member]').load({\n  attributes: ['Member ID', 'First Name', 'Last Name'],\n  values: {'ID' : 'Allen'},\n  success: function(bridgedData) {\n debugger;   \n    if (bridgedData===null) return;\n    K('field[Member GUID]').value(bridgedData['id']);\n    K('field[Member ID]').value(bridgedData['Member ID']);\n    K('field[Student First Name]').value(bridgedData['First Name']);\n    K('field[Student Last Name]').value(bridgedData['Last Name']);\n    K('field[Birthday]').value(bridgedData['DOB']);\n    K('field[Billing Customer Id]').value(bridgedData['Billing Customer Id']);\ndebugger;    \n    \n    if (form('review')) {\n      termsInformation=K('field[Terms Information Text]').value();\n      storeTermsAndConditions();\n    }\n    K('section[Student Information]').show();\n    if ($(K(\"form\").find(\"#firstinstallmentdate\")[0]).html()===\"\") {\n      var tomorrow = new Date((new Date()).getTime() + 24 * 60 * 60 * 1000);\n      bundle.config.widgets.xdsoftDatepicker({\n        element: K(\"form\").find(\"#firstinstallmentdate\")[0],\n        timepicker: false,\n        displayDateFormat: \"DD/MM/YYYY\",\n        options: {\n          startDate: tomorrow,\n          minDate: 0,\n          formatDate:\"d-m-Y\",\n          validateOnBlur:false\n        },\n        onSelectDate:function(ct,$i){\n          K('field[The first instalment is due on]').value(ct.dateFormat('YYYY-MM-DD'));\n        },\n        onGenerate: function( ct ){\n              $('.xdsoft_today')\n                .addClass('xdsoft_disabled');\n              $('.xdsoft_date.xdsoft_weekend')\n                .addClass('xdsoft_disabled');\n            }\n      });          \n    }\n  }\n});",
                   "bridgedResourceName": null,
                   "runIf": "values('Members')!==null"
                 },
@@ -1594,15 +1594,15 @@
           "name": "Load PaySmart Terms and Conditions",
           "type": "Load",
           "action": "Custom",
-          "code": "$.ajax({\n  method: \"POST\",\n  url: K('space').attributes(\"Kinetic Billing Server URL\")+\"/getTermsAndConditions\",\n  data: JSON.stringify({ \n    space: K('space').slug(),\n    billingService: K('space').attributes(\"Billing Company\"),\n  }),\n  headers: {\n    'Accept': 'application/json, text/plain, */*',\n    'Content-Type': 'application/json;charset=UTF-8'\n  }\n})\n.done(function( data ) {\n  debugger;\n  K('field[PaySmart Terms Information Text]').value(data.data);\n  $(\"#paySmartTermsInformation\").html(data.data);\n});\n",
-          "runIf": "K('field[PaySmart Terms Information Text]').value()===null"
+          "code": "/*K('field[PaySmart Terms Information Text]').value()===null*/\n$.ajax({\n  method: \"POST\",\n  url: K('space').attributes(\"Kinetic Billing Server URL\")+\"/getTermsAndConditions\",\n  data: JSON.stringify({ \n    space: K('space').slug(),\n    billingService: K('space').attributes(\"Billing Company\"),\n  }),\n  headers: {\n    'Accept': 'application/json, text/plain, */*',\n    'Content-Type': 'application/json;charset=UTF-8'\n  }\n})\n.done(function( data ) {\n  debugger;\n  K('field[PaySmart Terms Information Text]').value(data.data);\n  $(\"#paySmartTermsInformation\").html(data.data);\n});\n",
+          "runIf": ""
         },
         {
           "name": "Display PaySmart Terms and Conditions",
           "type": "Load",
           "action": "Custom",
-          "code": "$(\"#paySmartTermsInformation\").html(K('field[PaySmart Terms Information Text]').value());",
-          "runIf": "K('field[PaySmart Terms Information Text]').value()!==null"
+          "code": "/*K('field[PaySmart Terms Information Text]').value()!==null*/\n$(\"#paySmartTermsInformation\").html(K('field[PaySmart Terms Information Text]').value());",
+          "runIf": ""
         },
         {
           "name": "Member User Load",

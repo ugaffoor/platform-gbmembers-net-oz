@@ -44,9 +44,21 @@
       ]
     },
     {
+      "name": "AWS GBShop Bucket",
+      "values": [
+        "us-gbmembers-gbshop"
+      ]
+    },
+    {
+      "name": "AWS Photos Bucket",
+      "values": [
+        "us-gbmembers-photos"
+      ]
+    },
+    {
       "name": "AWS Region",
       "values": [
-        "ap-southeast-2"
+        "us-east-2"
       ]
     },
     {
@@ -269,12 +281,6 @@
       ]
     },
     {
-      "name": "School Freeze Charge",
-      "values": [
-        "25"
-      ]
-    },
-    {
       "name": "School From Alias",
       "values": [
         "GBMembers Template"
@@ -301,7 +307,7 @@
     {
       "name": "School States",
       "values": [
-        "AL,AK,AZ,AR,CA,CO,CT,DE,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY"
+        "ACT,NSW,NT,QLD,TAS,VIC,WA"
       ]
     },
     {
@@ -390,7 +396,7 @@
     {
       "name": "Web Server Url",
       "values": [
-        "https://gbmembers-template.kinops.io"
+        "https://gbmembers-template.gbmembers.net"
       ]
     }
   ],
@@ -401,11 +407,10 @@
   "defaultDatastoreFormConfirmationPage": null,
   "defaultDatastoreFormDisplayPage": null,
   "defaultLocale": "en-AU",
-  "defaultTimezone": "America/Denver",
+  "defaultTimezone": "Australia/Sydney",
   "displayType": "Single Page App",
   "displayValue": "spa.jsp?location=https://s3-ap-southeast-2.amazonaws.com/gbmembers",
   "enabledLocales": [
-    "en",
     "en-AU",
     "en-US"
   ],
