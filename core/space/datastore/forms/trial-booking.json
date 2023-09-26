@@ -6,7 +6,7 @@
 
   ],
   "customHeadContent": null,
-  "description": "Categories for group of Apparel and Services available for POS",
+  "description": "Record Online Trial bookings",
   "indexDefinitions": [
     {
       "name": "createdAt",
@@ -58,50 +58,57 @@
       "unique": false
     },
     {
-      "name": "values[Description]",
+      "name": "values[Class Title]",
       "parts": [
-        "values[Description]"
+        "values[Class Title]"
       ],
       "unique": false
     },
     {
-      "name": "values[Icon]",
+      "name": "values[Email]",
       "parts": [
-        "values[Icon]"
+        "values[Email]"
       ],
       "unique": false
     },
     {
-      "name": "values[Label]",
+      "name": "values[Lead ID]",
       "parts": [
-        "values[Label]"
+        "values[Lead ID]"
       ],
       "unique": false
     },
     {
-      "name": "values[Status]",
+      "name": "values[Lead ID],values[Trial Datetime]",
       "parts": [
-        "values[Status]"
+        "values[Lead ID]",
+        "values[Trial Datetime]"
       ],
       "unique": false
     },
     {
-      "name": "values[Type]",
+      "name": "values[Name]",
       "parts": [
-        "values[Type]"
+        "values[Name]"
       ],
       "unique": false
     },
     {
-      "name": "values[Type],values[Status]",
+      "name": "values[Phone Number]",
       "parts": [
-        "values[Type]",
-        "values[Status]"
+        "values[Phone Number]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Trial Datetime]",
+      "parts": [
+        "values[Trial Datetime]"
       ],
       "unique": false
     }
   ],
-  "name": "POS Categories",
+  "name": "Trial Bookings",
   "notes": null,
   "pages": [
     {
@@ -111,90 +118,14 @@
       "elements": [
         {
           "type": "field",
-          "name": "Status",
-          "label": "Status",
-          "key": "f1",
+          "name": "Lead ID",
+          "label": "Lead ID",
+          "key": "f6",
           "defaultValue": null,
           "defaultResourceName": null,
           "visible": true,
           "enabled": true,
-          "required": true,
-          "requiredMessage": null,
-          "omitWhenHidden": null,
-          "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
-          "dataType": "string",
-          "renderType": "radio",
-          "choicesResourceName": null,
-          "choicesRunIf": null,
-          "choices": [
-            {
-              "label": "Active",
-              "value": "Active"
-            },
-            {
-              "label": "Inactive",
-              "value": "Inactive"
-            }
-          ]
-        },
-        {
-          "type": "field",
-          "name": "Type",
-          "label": "Type",
-          "key": "f5",
-          "defaultValue": null,
-          "defaultResourceName": null,
-          "visible": true,
-          "enabled": true,
-          "required": true,
-          "requiredMessage": null,
-          "omitWhenHidden": null,
-          "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
-          "dataType": "string",
-          "renderType": "radio",
-          "choicesResourceName": null,
-          "choicesRunIf": null,
-          "choices": [
-            {
-              "label": "Apparel",
-              "value": "Apparel"
-            },
-            {
-              "label": "Service",
-              "value": "Service"
-            },
-            {
-              "label": "Package",
-              "value": "Package"
-            }
-          ]
-        },
-        {
-          "type": "field",
-          "name": "Label",
-          "label": "Label",
-          "key": "f2",
-          "defaultValue": null,
-          "defaultResourceName": null,
-          "visible": true,
-          "enabled": true,
-          "required": true,
+          "required": false,
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
@@ -212,8 +143,83 @@
         },
         {
           "type": "field",
-          "name": "Description",
-          "label": "Description",
+          "name": "Class Title",
+          "label": "Class Title",
+          "key": "f7",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 1
+        },
+        {
+          "type": "field",
+          "name": "Name",
+          "label": "Name",
+          "key": "f1",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 1
+        },
+        {
+          "type": "field",
+          "name": "Email",
+          "label": "Email",
+          "key": "f2",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 1
+        },
+        {
+          "type": "field",
+          "name": "Phone Number",
+          "label": "Phone Number",
           "key": "f3",
           "defaultValue": null,
           "defaultResourceName": null,
@@ -233,12 +239,12 @@
           },
           "dataType": "string",
           "renderType": "text",
-          "rows": 3
+          "rows": 1
         },
         {
           "type": "field",
-          "name": "Icon",
-          "label": "Icon",
+          "name": "Trial Datetime",
+          "label": "Trial Datetime",
           "key": "f4",
           "defaultValue": null,
           "defaultResourceName": null,
@@ -257,27 +263,8 @@
           "renderAttributes": {
           },
           "dataType": "string",
-          "renderType": "dropdown",
-          "choicesResourceName": null,
-          "choicesRunIf": null,
-          "choices": [
-            {
-              "label": "Events",
-              "value": "events"
-            },
-            {
-              "label": "Private Class",
-              "value": "private_class"
-            },
-            {
-              "label": "Promotion",
-              "value": "promotion"
-            },
-            {
-              "label": "Apparel",
-              "value": "apparel"
-            }
-          ]
+          "renderType": "text",
+          "rows": 1
         },
         {
           "type": "button",
@@ -301,18 +288,18 @@
   "securityPolicies": [
     {
       "endpoint": "Display",
-      "name": "Authenticated Users"
+      "name": "Admins"
     },
     {
       "endpoint": "Submission Access",
-      "name": "Program Managers and Coaches"
+      "name": "Everyone"
     },
     {
       "endpoint": "Submission Modification",
-      "name": "Data Admins"
+      "name": "Program Managers and Coaches"
     }
   ],
-  "slug": "pos-categories",
-  "status": "New",
-  "submissionLabelExpression": "${values('Status')}-${values('Type')}-${values('Label')}"
+  "slug": "trial-booking",
+  "status": "Active",
+  "submissionLabelExpression": "${values('Name')} ${values('Trial Datetime')}"
 }

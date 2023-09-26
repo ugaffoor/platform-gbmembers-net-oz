@@ -6,7 +6,7 @@
 
   ],
   "customHeadContent": null,
-  "description": "Categories for group of Apparel and Services available for POS",
+  "description": "Help information, references to Help documentation",
   "indexDefinitions": [
     {
       "name": "createdAt",
@@ -58,50 +58,35 @@
       "unique": false
     },
     {
-      "name": "values[Description]",
+      "name": "values[Application]",
       "parts": [
-        "values[Description]"
+        "values[Application]"
       ],
       "unique": false
     },
     {
-      "name": "values[Icon]",
+      "name": "values[Category]",
       "parts": [
-        "values[Icon]"
+        "values[Category]"
       ],
       "unique": false
     },
     {
-      "name": "values[Label]",
+      "name": "values[Information]",
       "parts": [
-        "values[Label]"
+        "values[Information]"
       ],
       "unique": false
     },
     {
-      "name": "values[Status]",
+      "name": "values[Title]",
       "parts": [
-        "values[Status]"
-      ],
-      "unique": false
-    },
-    {
-      "name": "values[Type]",
-      "parts": [
-        "values[Type]"
-      ],
-      "unique": false
-    },
-    {
-      "name": "values[Type],values[Status]",
-      "parts": [
-        "values[Type]",
-        "values[Status]"
+        "values[Title]"
       ],
       "unique": false
     }
   ],
-  "name": "POS Categories",
+  "name": "Help Info",
   "notes": null,
   "pages": [
     {
@@ -111,8 +96,8 @@
       "elements": [
         {
           "type": "field",
-          "name": "Status",
-          "label": "Status",
+          "name": "Application",
+          "label": "Application",
           "key": "f1",
           "defaultValue": null,
           "defaultResourceName": null,
@@ -136,59 +121,27 @@
           "choicesRunIf": null,
           "choices": [
             {
-              "label": "Active",
-              "value": "Active"
+              "label": "Members",
+              "value": "Members"
             },
             {
-              "label": "Inactive",
-              "value": "Inactive"
+              "label": "Services",
+              "value": "Services"
+            },
+            {
+              "label": "Waivers",
+              "value": "Waivers"
+            },
+            {
+              "label": "Home",
+              "value": "Home"
             }
           ]
         },
         {
           "type": "field",
-          "name": "Type",
-          "label": "Type",
-          "key": "f5",
-          "defaultValue": null,
-          "defaultResourceName": null,
-          "visible": true,
-          "enabled": true,
-          "required": true,
-          "requiredMessage": null,
-          "omitWhenHidden": null,
-          "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
-          "dataType": "string",
-          "renderType": "radio",
-          "choicesResourceName": null,
-          "choicesRunIf": null,
-          "choices": [
-            {
-              "label": "Apparel",
-              "value": "Apparel"
-            },
-            {
-              "label": "Service",
-              "value": "Service"
-            },
-            {
-              "label": "Package",
-              "value": "Package"
-            }
-          ]
-        },
-        {
-          "type": "field",
-          "name": "Label",
-          "label": "Label",
+          "name": "Category",
+          "label": "Category",
           "key": "f2",
           "defaultValue": null,
           "defaultResourceName": null,
@@ -212,14 +165,14 @@
         },
         {
           "type": "field",
-          "name": "Description",
-          "label": "Description",
+          "name": "Title",
+          "label": "Title",
           "key": "f3",
           "defaultValue": null,
           "defaultResourceName": null,
           "visible": true,
           "enabled": true,
-          "required": false,
+          "required": true,
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
@@ -233,18 +186,18 @@
           },
           "dataType": "string",
           "renderType": "text",
-          "rows": 3
+          "rows": 1
         },
         {
           "type": "field",
-          "name": "Icon",
-          "label": "Icon",
+          "name": "Information",
+          "label": "Information",
           "key": "f4",
           "defaultValue": null,
           "defaultResourceName": null,
           "visible": true,
           "enabled": true,
-          "required": false,
+          "required": true,
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
@@ -257,27 +210,8 @@
           "renderAttributes": {
           },
           "dataType": "string",
-          "renderType": "dropdown",
-          "choicesResourceName": null,
-          "choicesRunIf": null,
-          "choices": [
-            {
-              "label": "Events",
-              "value": "events"
-            },
-            {
-              "label": "Private Class",
-              "value": "private_class"
-            },
-            {
-              "label": "Promotion",
-              "value": "promotion"
-            },
-            {
-              "label": "Apparel",
-              "value": "apparel"
-            }
-          ]
+          "renderType": "text",
+          "rows": 5
         },
         {
           "type": "button",
@@ -301,18 +235,18 @@
   "securityPolicies": [
     {
       "endpoint": "Display",
-      "name": "Authenticated Users"
+      "name": "Data Admins"
     },
     {
       "endpoint": "Submission Access",
-      "name": "Program Managers and Coaches"
+      "name": "Data Admins"
     },
     {
       "endpoint": "Submission Modification",
       "name": "Data Admins"
     }
   ],
-  "slug": "pos-categories",
+  "slug": "help-info",
   "status": "New",
-  "submissionLabelExpression": "${values('Status')}-${values('Type')}-${values('Label')}"
+  "submissionLabelExpression": "${values('Application')}-${values('Category')}-${values('Title')}')}"
 }

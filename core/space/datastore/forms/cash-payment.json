@@ -6,7 +6,7 @@
 
   ],
   "customHeadContent": null,
-  "description": "Categories for group of Apparel and Services available for POS",
+  "description": "Recording of Membership Cash payments",
   "indexDefinitions": [
     {
       "name": "createdAt",
@@ -58,50 +58,35 @@
       "unique": false
     },
     {
-      "name": "values[Description]",
+      "name": "values[Amount]",
       "parts": [
-        "values[Description]"
+        "values[Amount]"
       ],
       "unique": false
     },
     {
-      "name": "values[Icon]",
+      "name": "values[Date]",
       "parts": [
-        "values[Icon]"
+        "values[Date]"
       ],
       "unique": false
     },
     {
-      "name": "values[Label]",
+      "name": "values[Member GUID]",
       "parts": [
-        "values[Label]"
+        "values[Member GUID]"
       ],
       "unique": false
     },
     {
-      "name": "values[Status]",
+      "name": "values[Member ID]",
       "parts": [
-        "values[Status]"
-      ],
-      "unique": false
-    },
-    {
-      "name": "values[Type]",
-      "parts": [
-        "values[Type]"
-      ],
-      "unique": false
-    },
-    {
-      "name": "values[Type],values[Status]",
-      "parts": [
-        "values[Type]",
-        "values[Status]"
+        "values[Member ID]"
       ],
       "unique": false
     }
   ],
-  "name": "POS Categories",
+  "name": "Cash Payment",
   "notes": null,
   "pages": [
     {
@@ -111,109 +96,8 @@
       "elements": [
         {
           "type": "field",
-          "name": "Status",
-          "label": "Status",
-          "key": "f1",
-          "defaultValue": null,
-          "defaultResourceName": null,
-          "visible": true,
-          "enabled": true,
-          "required": true,
-          "requiredMessage": null,
-          "omitWhenHidden": null,
-          "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
-          "dataType": "string",
-          "renderType": "radio",
-          "choicesResourceName": null,
-          "choicesRunIf": null,
-          "choices": [
-            {
-              "label": "Active",
-              "value": "Active"
-            },
-            {
-              "label": "Inactive",
-              "value": "Inactive"
-            }
-          ]
-        },
-        {
-          "type": "field",
-          "name": "Type",
-          "label": "Type",
-          "key": "f5",
-          "defaultValue": null,
-          "defaultResourceName": null,
-          "visible": true,
-          "enabled": true,
-          "required": true,
-          "requiredMessage": null,
-          "omitWhenHidden": null,
-          "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
-          "dataType": "string",
-          "renderType": "radio",
-          "choicesResourceName": null,
-          "choicesRunIf": null,
-          "choices": [
-            {
-              "label": "Apparel",
-              "value": "Apparel"
-            },
-            {
-              "label": "Service",
-              "value": "Service"
-            },
-            {
-              "label": "Package",
-              "value": "Package"
-            }
-          ]
-        },
-        {
-          "type": "field",
-          "name": "Label",
-          "label": "Label",
-          "key": "f2",
-          "defaultValue": null,
-          "defaultResourceName": null,
-          "visible": true,
-          "enabled": true,
-          "required": true,
-          "requiredMessage": null,
-          "omitWhenHidden": null,
-          "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
-          "dataType": "string",
-          "renderType": "text",
-          "rows": 1
-        },
-        {
-          "type": "field",
-          "name": "Description",
-          "label": "Description",
+          "name": "Member ID",
+          "label": "Member ID",
           "key": "f3",
           "defaultValue": null,
           "defaultResourceName": null,
@@ -233,12 +117,12 @@
           },
           "dataType": "string",
           "renderType": "text",
-          "rows": 3
+          "rows": 1
         },
         {
           "type": "field",
-          "name": "Icon",
-          "label": "Icon",
+          "name": "Member GUID",
+          "label": "Member GUID",
           "key": "f4",
           "defaultValue": null,
           "defaultResourceName": null,
@@ -257,27 +141,57 @@
           "renderAttributes": {
           },
           "dataType": "string",
-          "renderType": "dropdown",
-          "choicesResourceName": null,
-          "choicesRunIf": null,
-          "choices": [
-            {
-              "label": "Events",
-              "value": "events"
-            },
-            {
-              "label": "Private Class",
-              "value": "private_class"
-            },
-            {
-              "label": "Promotion",
-              "value": "promotion"
-            },
-            {
-              "label": "Apparel",
-              "value": "apparel"
-            }
-          ]
+          "renderType": "text",
+          "rows": 1
+        },
+        {
+          "type": "field",
+          "name": "Date",
+          "label": "Date",
+          "key": "f1",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+          },
+          "dataType": "string",
+          "renderType": "datetime"
+        },
+        {
+          "type": "field",
+          "name": "Amount",
+          "label": "Amount",
+          "key": "f2",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 1
         },
         {
           "type": "button",
@@ -299,20 +213,9 @@
     }
   ],
   "securityPolicies": [
-    {
-      "endpoint": "Display",
-      "name": "Authenticated Users"
-    },
-    {
-      "endpoint": "Submission Access",
-      "name": "Program Managers and Coaches"
-    },
-    {
-      "endpoint": "Submission Modification",
-      "name": "Data Admins"
-    }
+
   ],
-  "slug": "pos-categories",
+  "slug": "cash-payment",
   "status": "New",
-  "submissionLabelExpression": "${values('Status')}-${values('Type')}-${values('Label')}"
+  "submissionLabelExpression": "${values('Member ID')} - ${values('Date')} - ${values('Amount')}"
 }

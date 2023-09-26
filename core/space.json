@@ -185,6 +185,12 @@
       ]
     },
     {
+      "name": "Meta JSON Location",
+      "values": [
+        "https://gbmembers.s3.ap-southeast-2.amazonaws.com"
+      ]
+    },
+    {
       "name": "Online Week Family Price",
       "values": [
         "40"

@@ -6,8 +6,18 @@
   },
   {
     "allowsMultiple": false,
+    "description": "Semi colon separated list of values that will populate Access Request menus",
+    "name": "About Us Choices"
+  },
+  {
+    "allowsMultiple": false,
     "description": "Australian Company Number",
     "name": "ACN"
+  },
+  {
+    "allowsMultiple": false,
+    "description": "Set as YES to include\nInclude additional agenda options:\nOther\nPrefer not to answer",
+    "name": "Additional Gender Options"
   },
   {
     "allowsMultiple": false,
@@ -111,6 +121,11 @@
   },
   {
     "allowsMultiple": false,
+    "description": "Used for member registration to indicate schools dishonour fee charge",
+    "name": "Dishonour Fee"
+  },
+  {
+    "allowsMultiple": false,
     "description": "Form used for collecting feedback about the kinops portal.",
     "name": "Feedback Form Slug"
   },
@@ -141,6 +156,11 @@
   },
   {
     "allowsMultiple": false,
+    "description": "Semi colon separated list of values that will populate Access Request menus",
+    "name": "Interested In Choices"
+  },
+  {
+    "allowsMultiple": false,
     "description": "Form used by Admins to mass invite others to kinops",
     "name": "Invite Others Form Slug"
   },
@@ -158,6 +178,11 @@
     "allowsMultiple": false,
     "description": "Discounts for family members",
     "name": "Member Discounts"
+  },
+  {
+    "allowsMultiple": false,
+    "description": "Location of the Meta JSON file to work with ReactCacheBuster.\nThis is to ensure code releases are automatically picked up.",
+    "name": "Meta JSON Location"
   },
   {
     "allowsMultiple": false,
