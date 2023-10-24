@@ -21,6 +21,11 @@
   },
   {
     "allowsMultiple": false,
+    "description": "JSON array of Admin fee Costs.\neg,\n{\"Weekly\": \"$1.30\", \"Fortnightly\": \"$1.95\", \"Monthly\":\"$2.95\", \"Quarterly\": \"$3.95\"}",
+    "name": "Admin Fee Costs"
+  },
+  {
+    "allowsMultiple": false,
     "description": "Slug of this spaces Admin Kapp (typically admin)",
     "name": "Admin Kapp Slug"
   },
@@ -121,7 +126,7 @@
   },
   {
     "allowsMultiple": false,
-    "description": "Used for member registration to indicate schools dishonour fee charge",
+    "description": "Used for member registration to indicate schools dishonour fee charge.\nInclude the $ character.",
     "name": "Dishonour Fee"
   },
   {
@@ -323,6 +328,11 @@
     "allowsMultiple": false,
     "description": "Slugs needed to appears in the Services Report",
     "name": "Services Slugs"
+  },
+  {
+    "allowsMultiple": false,
+    "description": "JSON array of Setup fee Costs.\neg,\n{\"Weekly\": \"$6.60\", \"Fortnightly\": \"$6.60\", \"Monthly\":\"$6.60\", \"Quarterly\": \"$6.60\"}",
+    "name": "Setup Fee costs"
   },
   {
     "allowsMultiple": false,
