@@ -206,6 +206,11 @@
   },
   {
     "allowsMultiple": false,
+    "description": "Sub Account for a PaySmart school.\nUsed when a school is migrating and needs to setup a sub account.\nSet value to \"YES\" to apply.",
+    "name": "PaySmart SubAccount"
+  },
+  {
+    "allowsMultiple": false,
     "description": "Specify the Phone Number format for the school country.\nAU ####-###-###\nUS ###-###-####",
     "name": "PhoneNumber Format"
   },
@@ -388,6 +393,11 @@
     "allowsMultiple": false,
     "description": "Slug of this spaces Tech Bar Kapp (typically tech-bar)",
     "name": "Tech Bar Kapp Slug"
+  },
+  {
+    "allowsMultiple": false,
+    "description": "If added specify a full URL as a Thank overriding the Trial Booking page.",
+    "name": "Trial Booking Thank you URL"
   },
   {
     "allowsMultiple": false,

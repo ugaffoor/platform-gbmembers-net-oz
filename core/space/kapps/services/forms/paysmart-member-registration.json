@@ -624,7 +624,7 @@
                   "type": "Change",
                   "action": "Custom",
                   "code": "if (K('field[Payment Frequency]').value()===\"Weekly\"){\n  K('field[Admin Fee]').value(adminFees[\"Weekly\"]);\n  K('field[Setup Fee]').value(setupFees[\"Weekly\"]);\n} else if (K('field[Payment Frequency]').value()===\"Fortnightly\"){\n  K('field[Admin Fee]').value(adminFees[\"Fortnightly\"]);\n  K('field[Setup Fee]').value(setupFees[\"Fortnightly\"]);\n} else if (K('field[Payment Frequency]').value()===\"Monthly\"){\n  K('field[Admin Fee]').value(adminFees[\"Monthly\"]);\n  K('field[Setup Fee]').value(setupFees[\"Monthly\"]);\n} else if (K('field[Payment Frequency]').value()===\"Quarterly\"){\n  K('field[Admin Fee]').value(adminFees[\"Quarterly\"]);\n  K('field[Setup Fee]').value(setupFees[\"Quarterly\"]);\n}",
-                  "runIf": "values('Payment Frequency')!==null"
+                  "runIf": "values('Payment Frequency')!==null && !form('review')"
                 }
               ],
               "renderAttributes": {

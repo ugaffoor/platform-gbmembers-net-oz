@@ -899,12 +899,24 @@
                   "value": "Birthday"
                 },
                 {
+                  "label": "Adult Birthday",
+                  "value": "Adult Birthday"
+                },
+                {
+                  "label": "Child Birthday",
+                  "value": "Child Birthday"
+                },
+                {
                   "label": "Cancelled",
                   "value": "Cancelled"
                 },
                 {
                   "label": "Child Last Attendance",
                   "value": "Child Last Attendance"
+                },
+                {
+                  "label": "Child Converted",
+                  "value": "Child Converted"
                 },
                 {
                   "label": "Converted",
@@ -919,6 +931,14 @@
                   "value": "Last Attendance"
                 },
                 {
+                  "label": "Member Joined Once",
+                  "value": "Member Joined Once"
+                },
+                {
+                  "label": "Member Joined",
+                  "value": "Member Joined"
+                },
+                {
                   "label": "New Belt",
                   "value": "New Belt"
                 },
@@ -927,8 +947,8 @@
                   "value": "Payment Failed"
                 },
                 {
-                  "label": "Member Joined",
-                  "value": "Member Joined"
+                  "label": "Resume Frozen Member",
+                  "value": "Resume Frozen Member"
                 }
               ]
             },

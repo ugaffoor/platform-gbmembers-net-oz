@@ -8,6 +8,12 @@
       ]
     },
     {
+      "name": "About Us Choices",
+      "values": [
+        "Facebook; Family; Friend; Google; Google Ad; Instagram; Other; Word of Mouth;"
+      ]
+    },
+    {
       "name": "ACN",
       "values": [
         "123 456 7890"
@@ -161,6 +167,12 @@
       ]
     },
     {
+      "name": "Interested In Choices",
+      "values": [
+        "Women's Self Defence Classes; Kids Classes; Men's Classes; Women's Classes;"
+      ]
+    },
+    {
       "name": "Invite Others Form Slug",
       "values": [
         "kinops-invite-others"
@@ -169,7 +181,7 @@
     {
       "name": "Kinetic Billing Server URL",
       "values": [
-        "https://services.gbmembers.net/billingservice"
+        "http://localhost:8081/billingservice"
       ]
     },
     {
@@ -206,6 +218,12 @@
       "name": "Payment Frequencies",
       "values": [
         "Fortnightly,Weekly,Monthly"
+      ]
+    },
+    {
+      "name": "PaySmart SubAccount",
+      "values": [
+        "YES"
       ]
     },
     {
@@ -400,6 +418,12 @@
       ]
     },
     {
+      "name": "Trial Booking Thank you URL",
+      "values": [
+        "https://gbsydney.com.au/promotion"
+      ]
+    },
+    {
       "name": "Web Server Url",
       "values": [
         "https://gbmembers-template.gbmembers.net"
@@ -415,7 +439,7 @@
   "defaultLocale": "en-AU",
   "defaultTimezone": "Australia/Sydney",
   "displayType": "Single Page App",
-  "displayValue": "spa.jsp?location=https://s3-ap-southeast-2.amazonaws.com/gbmembers",
+  "displayValue": "spa.jsp?location=https://s3-ap-southeast-2.amazonaws.com/gbmembers-v2",
   "enabledLocales": [
     "en-AU",
     "en-US"

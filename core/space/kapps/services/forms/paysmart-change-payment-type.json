@@ -188,7 +188,7 @@
                   "name": "Get Members",
                   "type": "Change",
                   "action": "Custom",
-                  "code": "K('bridgedResource[Get Member]').load({\n  attributes: ['Member ID', 'First Name', 'Last Name'],\n  values: {'ID' : 'Allen'},\n  success: function(bridgedData) {\n    K('field[Member ID]').value(bridgedData['Member ID']);\n    K('field[Student First Name]').value(bridgedData['First Name']);\n    K('field[Student Last Name]').value(bridgedData['Last Name']);\n    K('field[Billing Customer Id]').value(bridgedData['Billing Customer Id']);\n    K('field[DOB]').value(bridgedData['DOB']);\n    K('section[Student Information]').show();\n  }\n});",
+                  "code": "K('bridgedResource[Get Member]').load({\n  attributes: ['Member ID', 'First Name', 'Last Name'],\n  values: {'ID' : 'Allen'},\n  success: function(bridgedData) {\n    K('field[Member ID]').value(bridgedData['Member ID']);\n    K('field[Student First Name]').value(bridgedData['First Name']);\n    K('field[Student Last Name]').value(bridgedData['Last Name']);\n    K('field[Billing Customer Id]').value(bridgedData['Billing Customer Id']);\n    K('field[useSubAccount]').value(bridgedData['useSubAccount']);\n    K('field[DOB]').value(bridgedData['DOB']);\n    K('section[Student Information]').show();\n  }\n});",
                   "bridgedResourceName": null,
                   "runIf": "values('Members')!==\"\""
                 },
@@ -196,7 +196,7 @@
                   "name": "Clear Member Details",
                   "type": "Change",
                   "action": "Custom",
-                  "code": "K('field[Member ID]').value(\"\");\nK('field[Student First Name]').value(\"\");\nK('field[Student Last Name]').value(\"\");\nK('field[DOB]').value(\"\");\nK('field[Billing Customer Id]').value(\"\");\nK('section[Student Information]').hide();\n\nK('section[Member Select Space]').show();    \n",
+                  "code": "K('field[Member ID]').value(\"\");\nK('field[Student First Name]').value(\"\");\nK('field[Student Last Name]').value(\"\");\nK('field[DOB]').value(\"\");\nK('field[Billing Customer Id]').value(\"\");\nK('field[useSubAccount]').value(\"\");\n\nK('section[Student Information]').hide();\n\nK('section[Member Select Space]').show();    \n",
                   "runIf": "values('Members')===null"
                 }
               ],
@@ -436,6 +436,31 @@
               "defaultResourceName": null,
               "visible": false,
               "enabled": false,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": false,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "useSubAccount",
+              "label": "useSubAccount",
+              "key": "f51",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": false,
+              "enabled": true,
               "required": false,
               "requiredMessage": null,
               "omitWhenHidden": false,

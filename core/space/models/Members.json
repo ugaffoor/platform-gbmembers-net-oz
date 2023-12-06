@@ -129,6 +129,9 @@
     },
     {
       "name": "Suburb"
+    },
+    {
+      "name": "useSubAccount"
     }
   ],
   "mappings": [
@@ -306,6 +309,10 @@
         {
           "name": "POS Profile ID",
           "structureField": "${fields('values[POS Profile ID]')}"
+        },
+        {
+          "name": "useSubAccount",
+          "structureField": "${fields('values[useSubAccount]')}"
         }
       ],
       "bridgeSlug": "kinetic-core",
