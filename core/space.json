@@ -271,7 +271,7 @@
     {
       "name": "Privacy Policy",
       "values": [
-        "https://gbbroadbeach.com.au/newsItem/privacypolicy"
+        "https://gbsydney.com.au/newsItem/privacypolicy"
       ]
     },
     {
@@ -290,6 +290,12 @@
       "name": "School Address",
       "values": [
         "Unit 3 456 Main St, NSW 2000"
+      ]
+    },
+    {
+      "name": "School Closed Dates",
+      "values": [
+        "2024-11-21,2024-11-29,2024-11-30"
       ]
     },
     {
@@ -320,6 +326,12 @@
       "name": "School Name",
       "values": [
         "Gracie Barra Template"
+      ]
+    },
+    {
+      "name": "School Start Date",
+      "values": [
+        ""
       ]
     },
     {
@@ -421,6 +433,12 @@
       "name": "Trial Booking Thank you URL",
       "values": [
         "https://gbsydney.com.au/promotion"
+      ]
+    },
+    {
+      "name": "Waiver Hidden Items",
+      "values": [
+        "info_images"
       ]
     },
     {
