@@ -181,6 +181,11 @@
   },
   {
     "allowsMultiple": false,
+    "description": "Current Belt of Member",
+    "name": "Member Belt Size"
+  },
+  {
+    "allowsMultiple": false,
     "description": "Discounts for family members",
     "name": "Member Discounts"
   },

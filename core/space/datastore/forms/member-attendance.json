@@ -135,6 +135,13 @@
         "values[Status]"
       ],
       "unique": false
+    },
+    {
+      "name": "values[Title]",
+      "parts": [
+        "values[Title]"
+      ],
+      "unique": false
     }
   ],
   "name": "Member Attendance",
@@ -283,6 +290,31 @@
         },
         {
           "type": "field",
+          "name": "Title",
+          "label": "Title",
+          "key": "f10",
+          "defaultValue": null,
+          "defaultResourceName": null,
+          "visible": true,
+          "enabled": true,
+          "required": false,
+          "requiredMessage": null,
+          "omitWhenHidden": null,
+          "pattern": null,
+          "constraints": [
+
+          ],
+          "events": [
+
+          ],
+          "renderAttributes": {
+          },
+          "dataType": "string",
+          "renderType": "text",
+          "rows": 1
+        },
+        {
+          "type": "field",
           "name": "Class",
           "label": "Class",
           "key": "f9",
@@ -381,20 +413,24 @@
           "choicesRunIf": null,
           "choices": [
             {
-              "label": "Class Only",
-              "value": "Class Only"
+              "label": "Ontime",
+              "value": "Ontime"
             },
             {
               "label": "Late",
               "value": "Late"
             },
             {
-              "label": "Spar Only",
-              "value": "Spar Only"
+              "label": "Spa Only",
+              "value": "Spa Only"
             },
             {
               "label": "Full Class",
               "value": "Full Class"
+            },
+            {
+              "label": "Class Only",
+              "value": "Class Only"
             }
           ]
         },
@@ -437,5 +473,5 @@
   ],
   "slug": "member-attendance",
   "status": "Active",
-  "submissionLabelExpression": "${values('Class Date')} ${values('Class Time')} - ${values('Class')} : ${values('Member ID')}"
+  "submissionLabelExpression": "${values('Class Date')} ${values('Class Time')} - ${values('Class')} - ${values('Member ID')} - ${values('Attendance Status')}"
 }
