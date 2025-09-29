@@ -196,6 +196,11 @@
   },
   {
     "allowsMultiple": false,
+    "description": "Migration Mode used to onboard billing information for a school.",
+    "name": "Migration Mode"
+  },
+  {
+    "allowsMultiple": false,
     "description": "Family Price for the Online program for issues like Lockdowns (Covid).\nEnter a dollar amount such as, 40",
     "name": "Online Week Family Price"
   },
