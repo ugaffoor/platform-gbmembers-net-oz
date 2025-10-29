@@ -1990,6 +1990,31 @@
               "dataType": "string",
               "renderType": "text",
               "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "TAX ID",
+              "label": "TAX ID",
+              "key": "f108",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
             }
           ]
         },
@@ -2231,6 +2256,31 @@
               "name": "Last Payment Transaction ID",
               "label": "Last Payment Transaction ID",
               "key": "f106",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Last Payment Transaction Amount",
+              "label": "Last Payment Transaction Amount",
+              "key": "f107",
               "defaultValue": null,
               "defaultResourceName": null,
               "visible": true,
