@@ -1,6 +1,11 @@
 {
   "attributes": [
-
+    {
+      "name": "Datastore Hidden",
+      "values": [
+        "true"
+      ]
+    }
   ],
   "bridgedResources": [
 
@@ -72,6 +77,13 @@
       "unique": false
     },
     {
+      "name": "values[Booking Cutoff]",
+      "parts": [
+        "values[Booking Cutoff]"
+      ],
+      "unique": false
+    },
+    {
       "name": "values[Cancellation Cutoff]",
       "parts": [
         "values[Cancellation Cutoff]"
@@ -96,6 +108,13 @@
       "name": "values[Colour]",
       "parts": [
         "values[Colour]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Description]",
+      "parts": [
+        "values[Description]"
       ],
       "unique": false
     },
@@ -283,6 +302,31 @@
             },
             {
               "type": "field",
+              "name": "Description",
+              "label": "Description",
+              "key": "f19",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
               "name": "Program",
               "label": "Program",
               "key": "f5",
@@ -411,6 +455,31 @@
               "name": "Cancellation Cutoff",
               "label": "Cancellation Cutoff",
               "key": "f13",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": false,
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": null,
+              "constraints": [
+
+              ],
+              "events": [
+
+              ],
+              "renderAttributes": {
+              },
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Booking Cutoff",
+              "label": "Booking Cutoff",
+              "key": "f18",
               "defaultValue": null,
               "defaultResourceName": null,
               "visible": true,

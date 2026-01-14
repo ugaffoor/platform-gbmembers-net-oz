@@ -20,6 +20,12 @@
       ]
     },
     {
+      "name": "Admin Fee Costs",
+      "values": [
+        "{\"Weekly\": \"$1.50\", \"Fortnightly\": \"$2.30\", \"Monthly\":\"$3.60\", \"Quarterly\": \"$3.95\"}"
+      ]
+    },
+    {
       "name": "Admin Kapp Slug",
       "values": [
         "admin"
@@ -47,6 +53,12 @@
       "name": "Australia School States",
       "values": [
         "ACT,NSW,NT,QLD,TAS,VIC,WA"
+      ]
+    },
+    {
+      "name": "AutoCompleteKey",
+      "values": [
+        "AIzaSyA-tujnpf8Jy33hVaJ_9GtRdMgHw4jvnwo"
       ]
     },
     {
@@ -181,7 +193,7 @@
     {
       "name": "Kinetic Billing Server URL",
       "values": [
-        "http://localhost:8081/billingservice"
+        "https://gbbilling.com.au:8443/billingservice"
       ]
     },
     {
@@ -205,7 +217,13 @@
     {
       "name": "Meta JSON Location",
       "values": [
-        "https://gbmembers.s3.ap-southeast-2.amazonaws.com"
+        "https://gbmembers-v2.s3.ap-southeast-2.amazonaws.com"
+      ]
+    },
+    {
+      "name": "Migration Mode",
+      "values": [
+        "YES"
       ]
     },
     {
@@ -224,12 +242,6 @@
       "name": "Payment Frequencies",
       "values": [
         "Fortnightly,Weekly,Monthly"
-      ]
-    },
-    {
-      "name": "PaySmart SubAccount",
-      "values": [
-        "YES"
       ]
     },
     {
@@ -444,7 +456,7 @@
     {
       "name": "Waiver Hidden Items",
       "values": [
-        "info_images"
+        "social_media,info_images,report_aboutus,health_info,report_many_days,juijitsui_previous,juijitsui_current,juijitsui_long,juijitsui_benefits,path_to_excellance"
       ]
     },
     {
@@ -463,7 +475,7 @@
   "defaultLocale": "en-AU",
   "defaultTimezone": "Australia/Sydney",
   "displayType": "Single Page App",
-  "displayValue": "spa.jsp?location=https://s3-ap-southeast-2.amazonaws.com/gbmembers",
+  "displayValue": "https://s3.ap-southeast-2.amazonaws.com/gbmembers-v3/index.html",
   "enabledLocales": [
     "en-AU",
     "en-US"

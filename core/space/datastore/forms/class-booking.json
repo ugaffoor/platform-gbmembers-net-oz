@@ -1,6 +1,11 @@
 {
   "attributes": [
-
+    {
+      "name": "Datastore Hidden",
+      "values": [
+        "true"
+      ]
+    }
   ],
   "bridgedResources": [
 
@@ -147,6 +152,16 @@
       "name": "values[Status]",
       "parts": [
         "values[Status]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Status],values[Class Time],values[Program],values[Title]",
+      "parts": [
+        "values[Status]",
+        "values[Class Time]",
+        "values[Program]",
+        "values[Title]"
       ],
       "unique": false
     },

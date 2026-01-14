@@ -1043,5 +1043,5 @@
   ],
   "slug": "pos-product",
   "status": "New",
-  "submissionLabelExpression": "${values('Display Order')}:${values('Status')}-${values('Product Type')}-${values('Sizes')}"
+  "submissionLabelExpression": "${values('Name')}-${values('Sizes')}"
 }
