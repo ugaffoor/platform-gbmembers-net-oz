@@ -302,7 +302,7 @@
             {
               "type": "field",
               "name": "First Name",
-              "label": "First Name",
+              "label": "Student First Name",
               "key": "f28",
               "defaultValue": null,
               "defaultResourceName": null,
@@ -338,7 +338,7 @@
             {
               "type": "field",
               "name": "Last Name",
-              "label": "Last Name",
+              "label": "Student Last Name",
               "key": "f29",
               "defaultValue": null,
               "defaultResourceName": null,
