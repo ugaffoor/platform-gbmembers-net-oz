@@ -30,9 +30,7 @@
     {
       "model": "Members",
       "name": "Get Member",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${values('Members')}",
@@ -45,12 +43,8 @@
     {
       "model": "Members",
       "name": "Members",
-      "order": [
-
-      ],
-      "parameters": [
-
-      ],
+      "order": [],
+      "parameters": [],
       "qualification": "Active Members",
       "status": "Active"
     }
@@ -79,8 +73,7 @@
           "title": "Select Member",
           "visible": "!form('review')",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -95,9 +88,7 @@
               "requiredMessage": "A member must be selected",
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Get Member",
@@ -115,8 +106,7 @@
                   "runIf": "values('Members')===null"
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "dropdown",
               "choicesResourceName": "Members",
@@ -132,8 +122,7 @@
               "name": "Members Select",
               "text": "<div id=\"selectMemberMenu\"></div>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             }
           ]
         },
@@ -144,8 +133,7 @@
           "title": "Student Information",
           "visible": "values('Members')!==null && ((typeof(loadingDetails) !== \"undefined\" && !loadingDetails) || form('review')) ",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -160,14 +148,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -185,9 +168,7 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Requested For",
@@ -202,8 +183,7 @@
                   ]
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -221,9 +201,7 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Requested For",
@@ -238,8 +216,7 @@
                   ]
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -257,14 +234,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -282,14 +254,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -307,14 +274,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -332,14 +294,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -357,14 +314,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "date"
             },
@@ -381,14 +333,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -402,8 +349,7 @@
           "title": "",
           "visible": "values('Members')!==null && ((typeof(loadingDetails) !== \"undefined\" && !loadingDetails) || form('review')) ",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -418,14 +364,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "json",
               "renderType": "checkbox",
               "choicesResourceName": null,
@@ -462,14 +403,9 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -480,8 +416,7 @@
               "name": "Date of Last Payment HMTL",
               "text": "<div class=\"form-group required\" linkedField=\"Date of Last Payment\">  \n  <label class=\"field-label\" for=\"dateoflastpayment\">Freeze Date(no payment made)</label>\n  <div id=\"dateoflastpayment\"></div>\n</div>",
               "visible": "!form('review')",
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             },
             {
               "type": "field",
@@ -496,14 +431,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "date"
             },
@@ -520,14 +450,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "date"
             },
@@ -544,14 +469,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "radio",
               "choicesResourceName": null,
@@ -573,8 +493,7 @@
               "name": "Date Payments Resume HTML",
               "text": "<div class=\"form-group required\" linkedField=\"Date Payments Resume\">  \n  <label class=\"field-label\" for=\"datepaymentsresume\">Date Payments Resume</label>\n  <div id=\"datepaymentsresume\"></div>\n</div>",
               "visible": "!form('review') && values('Resume Date Option')===\"Resume Date\"",
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             },
             {
               "type": "field",
@@ -589,14 +508,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "date"
             }
@@ -609,8 +523,7 @@
           "title": null,
           "visible": false,
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -625,9 +538,7 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Value",
@@ -636,8 +547,7 @@
                   "code": "debugger;\nif (K('field[Freeze Fee]').value()===\"Apply\") {    \n\t\tvar freezeCharge=K('space').attributes('School Freeze Charge');    \n  \n\t\tif (K('field[Billing Period]').value()===\"Fortnightly\"){\n      freezeCharge=\"$\"+(parseFloat(freezeCharge)/2).toFixed(2);\n    } else if (K('field[Billing Period]').value()===\"Weekly\"){\n      freezeCharge=\"$\"+(parseFloat(freezeCharge)/4).toFixed(2);\n    } else {\n      freezeCharge=\"$\"+freezeCharge;\n    }\n    K('field[Freeze Charge]').value(freezeCharge);\n} else {\n    K('field[Freeze Charge]').value(\"\");\n}"
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "radio",
               "choicesResourceName": null,
@@ -666,14 +576,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -687,8 +592,7 @@
           "title": "List of Documents",
           "visible": "values('Members')!==null && ((typeof(loadingDetails) !== \"undefined\" && !loadingDetails) || form('review')) ",
           "omitWhenHidden": true,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "content",
@@ -696,8 +600,7 @@
               "name": "Document Information",
               "text": "<p>Please provide the list of documents you are submitting to prove the reason for your membership freeze request.</p>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             },
             {
               "type": "field",
@@ -712,14 +615,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "file",
               "renderType": "attachment",
               "allowMultiple": false
@@ -737,14 +635,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "file",
               "renderType": "attachment",
               "allowMultiple": false
@@ -762,14 +655,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "file",
               "renderType": "attachment",
               "allowMultiple": false
@@ -783,8 +671,7 @@
           "title": "Terms",
           "visible": "values('Members')!==null && ((typeof(loadingDetails) !== \"undefined\" && !loadingDetails) || form('review')) ",
           "omitWhenHidden": true,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "content",
@@ -792,8 +679,7 @@
               "name": "Terms Information",
               "text": "<div class=\"emf-section-text\">The student's installment payments must be current and up to date prior to submitting the application.<br>\n<br>\nThirty (30) days written notice must be given at the school, and the minimum freeze period is thirty (30) days.<br>\n<br>\nYour request will be evaluated and you will be contacted within 3 business days.</div>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             },
             {
               "type": "field",
@@ -808,14 +694,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "date"
             },
@@ -825,8 +706,7 @@
               "name": "Member Signature",
               "text": "<label class=\"field-label required\">Member Signature</label><div id=\"member-signature-canvas\"/>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             },
             {
               "type": "field",
@@ -841,14 +721,9 @@
               "requiredMessage": "Gracie Barra Representative Signature is required",
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -862,8 +737,7 @@
           "title": null,
           "visible": true,
           "omitWhenHidden": null,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "content",
@@ -871,8 +745,7 @@
               "name": "Member Select Space",
               "text": "<div style=\"height:300px\"></div>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             }
           ]
         },
@@ -883,8 +756,7 @@
           "visible": true,
           "enabled": true,
           "renderType": "submit-page",
-          "renderAttributes": {
-          }
+          "renderAttributes": {}
         }
       ],
       "events": [

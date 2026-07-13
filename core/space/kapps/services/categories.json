@@ -1,51 +1,42 @@
 [
   {
-    "attributes": [
-
-    ],
+    "attributes": [],
     "name": "Billing Registration",
     "slug": "billing-registration"
   },
   {
-    "attributes": [
-
-    ],
+    "attributes": [],
     "name": "Bombara Billing",
     "slug": "bombara-billing"
   },
   {
-    "attributes": [
-
-    ],
+    "attributes": [],
     "name": "Class Bookings",
     "slug": "class-bookings"
   },
   {
-    "attributes": [
-
-    ],
+    "attributes": [],
     "name": "Incidents",
     "slug": "incidents"
   },
   {
-    "attributes": [
-
-    ],
+    "attributes": [],
     "name": "Oceania",
     "slug": "oceania"
   },
   {
-    "attributes": [
-
-    ],
+    "attributes": [],
     "name": "Payline Billing",
     "slug": "payline-billing"
   },
   {
-    "attributes": [
-
-    ],
+    "attributes": [],
     "name": "Registrations",
     "slug": "registrations"
+  },
+  {
+    "attributes": [],
+    "name": "Stripe Billing",
+    "slug": "stripe-billing"
   }
 ]

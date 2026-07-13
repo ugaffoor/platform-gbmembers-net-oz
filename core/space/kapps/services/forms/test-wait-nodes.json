@@ -8,9 +8,7 @@
       ]
     }
   ],
-  "bridgedResources": [
-
-  ],
+  "bridgedResources": [],
   "categorizations": [
     {
       "category": {
@@ -41,22 +39,16 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
         },
         {
           "visible": true,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "name": "Submit Button",
           "label": "Submit",
           "type": "button",
@@ -64,9 +56,7 @@
           "enabled": true
         }
       ],
-      "events": [
-
-      ],
+      "events": [],
       "name": "Page 1",
       "renderType": "submittable",
       "type": "page"

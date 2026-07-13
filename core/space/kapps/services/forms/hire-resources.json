@@ -1,15 +1,11 @@
 {
   "anonymous": false,
-  "attributes": [
-
-  ],
+  "attributes": [],
   "bridgedResources": [
     {
       "model": "Hire Resources",
       "name": "Get Hire Resource",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${values('Person to Hire')}",
@@ -22,9 +18,7 @@
     {
       "model": "Hire Resources",
       "name": "Hire Resources",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${values('Resource Type')}",
@@ -37,9 +31,7 @@
     {
       "model": "Person",
       "name": "Person",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${identity('username')}",
@@ -79,8 +71,7 @@
           "title": null,
           "visible": "form('review')",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -95,14 +86,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -120,14 +106,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -145,14 +126,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -170,14 +146,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -195,14 +166,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -222,14 +188,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "radio",
           "choicesResourceName": null,
@@ -258,9 +219,7 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
+          "constraints": [],
           "events": [
             {
               "name": "Get Hire Resource",
@@ -288,8 +247,7 @@
               "runIf": "values('Person to Hire')!==null"
             }
           ],
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "dropdown",
           "choicesResourceName": "Hire Resources",
@@ -306,8 +264,7 @@
           "title": null,
           "visible": "values('Person to Hire')!==null",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "content",
@@ -315,8 +272,7 @@
               "name": "Resource Information",
               "text": "<span>\n  <label>Information</label>\n  <div class=\"htmlData\" id=\"informationValue\"></div>\n  <br>\n  <label>Photo</label>\n  <img class=\"photoImg\" id=\"photoValue\"></img>\n  <br>\n  <label>Resume</label>\n  <div class=\"htmlData\" id=\"resumeValue\"></div>\n</span>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             }
           ]
         },
@@ -327,8 +283,7 @@
           "title": null,
           "visible": false,
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -343,14 +298,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -368,14 +318,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -393,14 +338,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -418,14 +358,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -439,8 +374,7 @@
           "title": "Request Details",
           "visible": "values('Person to Hire')!==null",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -455,14 +389,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "date"
             },
@@ -479,14 +408,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "date"
             },
@@ -503,14 +427,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 5
@@ -524,8 +443,7 @@
           "visible": true,
           "enabled": true,
           "renderType": "submit-page",
-          "renderAttributes": {
-          }
+          "renderAttributes": {}
         }
       ],
       "events": [

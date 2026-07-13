@@ -1,14 +1,10 @@
 {
-  "attributes": [
-
-  ],
+  "attributes": [],
   "bridgedResources": [
     {
       "model": "POS Categories",
       "name": "Categories",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${values('Product Type')}",
@@ -21,12 +17,8 @@
     {
       "model": "POS Products",
       "name": "Get Products",
-      "order": [
-
-      ],
-      "parameters": [
-
-      ],
+      "order": [],
+      "parameters": [],
       "qualification": "Get Products",
       "status": "Active"
     }
@@ -231,14 +223,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "radio",
           "choicesResourceName": null,
@@ -271,14 +258,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -296,14 +278,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "dropdown",
           "choicesResourceName": null,
@@ -336,14 +313,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "radio",
           "choicesResourceName": null,
@@ -376,14 +348,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -401,14 +368,9 @@
           "requiredMessage": null,
           "omitWhenHidden": true,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -426,14 +388,9 @@
           "requiredMessage": null,
           "omitWhenHidden": true,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "json",
           "renderType": "checkbox",
           "choicesResourceName": null,
@@ -458,14 +415,9 @@
           "requiredMessage": null,
           "omitWhenHidden": true,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "radio",
           "choicesResourceName": null,
@@ -494,9 +446,7 @@
           "requiredMessage": null,
           "omitWhenHidden": true,
           "pattern": null,
-          "constraints": [
-
-          ],
+          "constraints": [],
           "events": [
             {
               "name": "Build URL",
@@ -505,8 +455,7 @@
               "code": "debugger;\nfileJSON=K('field[Image]').value();\nurl=\"/app/datastore/submissions/\"+K('form').submission().id()+\"/files/Image/0/\"+fileJSON[0].name;\nK('field[Image URL]').value(url);"
             }
           ],
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "dataType": "file",
           "renderType": "attachment",
           "allowMultiple": false
@@ -524,14 +473,9 @@
           "requiredMessage": null,
           "omitWhenHidden": false,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -549,14 +493,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -574,14 +513,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 10
@@ -599,14 +533,9 @@
           "requiredMessage": null,
           "omitWhenHidden": true,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "json",
           "renderType": "checkbox",
           "choicesResourceName": "Get Products",
@@ -629,14 +558,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -654,14 +578,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -679,14 +598,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -704,14 +618,9 @@
           "requiredMessage": null,
           "omitWhenHidden": true,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "json",
           "renderType": "checkbox",
           "choicesResourceName": null,
@@ -960,14 +869,9 @@
           "requiredMessage": null,
           "omitWhenHidden": true,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -985,14 +889,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "json",
           "renderType": "checkbox",
           "choicesResourceName": "Categories",
@@ -1009,8 +908,7 @@
           "visible": true,
           "enabled": true,
           "renderType": "submit-page",
-          "renderAttributes": {
-          }
+          "renderAttributes": {}
         }
       ],
       "events": [

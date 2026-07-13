@@ -1,10 +1,6 @@
 {
-  "attributes": [
-
-  ],
-  "bridgedResources": [
-
-  ],
+  "attributes": [],
+  "bridgedResources": [],
   "customHeadContent": null,
   "description": "People that can be requested for Hire by schools.\nThis list is intended for headquarter management, and can be requested from a school.",
   "indexDefinitions": [
@@ -128,14 +124,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "radio",
           "choicesResourceName": null,
@@ -164,14 +155,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "radio",
           "choicesResourceName": null,
@@ -200,14 +186,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -225,14 +206,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 4
@@ -250,9 +226,7 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
+          "constraints": [],
           "events": [
             {
               "name": "Clear Photo URL",
@@ -267,8 +241,7 @@
               ]
             }
           ],
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "dataType": "file",
           "renderType": "attachment",
           "allowMultiple": false
@@ -286,14 +259,9 @@
           "requiredMessage": null,
           "omitWhenHidden": false,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -304,8 +272,7 @@
           "name": "Resume Editor",
           "text": "<div id=\"resume\"/> ",
           "visible": true,
-          "renderAttributes": {
-          }
+          "renderAttributes": {}
         },
         {
           "type": "field",
@@ -320,14 +287,9 @@
           "requiredMessage": null,
           "omitWhenHidden": false,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 20
@@ -339,8 +301,7 @@
           "title": null,
           "visible": true,
           "omitWhenHidden": null,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -355,14 +316,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 2
@@ -376,8 +332,7 @@
           "visible": true,
           "enabled": true,
           "renderType": "submit-page",
-          "renderAttributes": {
-          }
+          "renderAttributes": {}
         }
       ],
       "events": [

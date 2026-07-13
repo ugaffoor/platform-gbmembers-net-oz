@@ -92,9 +92,7 @@
   "qualifications": [
     {
       "name": "Class Schedules",
-      "parameters": [
-
-      ],
+      "parameters": [],
       "resultType": "Multiple"
     }
   ],

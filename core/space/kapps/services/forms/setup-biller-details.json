@@ -30,21 +30,15 @@
     {
       "model": "Members",
       "name": "Get Billing Members",
-      "order": [
-
-      ],
-      "parameters": [
-
-      ],
+      "order": [],
+      "parameters": [],
       "qualification": "Get Billing Members",
       "status": "Active"
     },
     {
       "model": "Members",
       "name": "Get Family Member",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${values('Family Member')}",
@@ -57,9 +51,7 @@
     {
       "model": "Members",
       "name": "Get Member",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${values('Members')}",
@@ -72,9 +64,7 @@
     {
       "model": "Program Fees",
       "name": "Get Program",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${values('Programs')}",
@@ -87,21 +77,15 @@
     {
       "model": "Members",
       "name": "Members",
-      "order": [
-
-      ],
-      "parameters": [
-
-      ],
+      "order": [],
+      "parameters": [],
       "qualification": "Get Active and Frozen Members",
       "status": "Active"
     },
     {
       "model": "Program Fees",
       "name": "Program Fees",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${values('Payment Frequency')}",
@@ -136,8 +120,7 @@
           "title": "Select Member",
           "visible": "!form('review')",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -152,9 +135,7 @@
               "requiredMessage": "A member must be selected",
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Get Members",
@@ -172,8 +153,7 @@
                   "runIf": "values('Members')===null"
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "dropdown",
               "choicesResourceName": "Get Billing Members",
@@ -189,8 +169,7 @@
               "name": "Members Select",
               "text": "<div id=\"selectMemberMenu\"></div>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             }
           ]
         },
@@ -201,8 +180,7 @@
           "title": "Student Information",
           "visible": false,
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -217,14 +195,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -242,9 +215,7 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Requested For",
@@ -259,8 +230,7 @@
                   ]
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -278,9 +248,7 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Requested For",
@@ -295,8 +263,7 @@
                   ]
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -314,14 +281,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -339,14 +301,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -364,14 +321,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -389,14 +341,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -408,8 +355,7 @@
               "title": "Family Members",
               "visible": true,
               "omitWhenHidden": null,
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "elements": [
                 {
                   "type": "field",
@@ -424,14 +370,9 @@
                   "requiredMessage": null,
                   "omitWhenHidden": null,
                   "pattern": null,
-                  "constraints": [
-
-                  ],
-                  "events": [
-
-                  ],
-                  "renderAttributes": {
-                  },
+                  "constraints": [],
+                  "events": [],
+                  "renderAttributes": {},
                   "dataType": "string",
                   "renderType": "radio",
                   "choicesResourceName": null,
@@ -458,8 +399,7 @@
           "title": "Program Information",
           "visible": "values('Include Family Members')!==null",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -474,14 +414,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "radio",
               "choicesResourceName": null,
@@ -518,9 +453,7 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Get Family Member",
@@ -541,8 +474,7 @@
                   "bridgedResourceName": "Get Family Member"
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "dropdown",
               "choicesResourceName": "Members",
@@ -558,8 +490,7 @@
               "name": "Family Member Select",
               "text": "<div id=\"selectFamilyMemberMenu\"></div>",
               "visible": "values('Include Family Members')===\"Yes\" && !form('review')",
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             },
             {
               "type": "field",
@@ -574,14 +505,9 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -599,14 +525,9 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -624,9 +545,7 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Get Program",
@@ -652,8 +571,7 @@
                   "bridgedResourceName": "Get Program"
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "dropdown",
               "choicesResourceName": "Program Fees",
@@ -676,14 +594,9 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -701,14 +614,9 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -726,9 +634,7 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Fee as Individual",
@@ -744,8 +650,7 @@
                   "runIf": "values('Include Family Members')===\"No\""
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -757,8 +662,7 @@
               "title": null,
               "visible": "values('Include Family Members')!==null",
               "omitWhenHidden": true,
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "elements": [
                 {
                   "type": "button",
@@ -767,8 +671,7 @@
                   "visible": true,
                   "enabled": true,
                   "renderType": "custom",
-                  "renderAttributes": {
-                  },
+                  "renderAttributes": {},
                   "events": [
                     {
                       "name": "Set Current Member",
@@ -786,8 +689,7 @@
                   "visible": "values('Include Family Members')===\"Yes\"",
                   "enabled": true,
                   "renderType": "custom",
-                  "renderAttributes": {
-                  },
+                  "renderAttributes": {},
                   "events": [
                     {
                       "name": "Add Family Member",
@@ -805,8 +707,7 @@
                   "visible": true,
                   "enabled": true,
                   "renderType": "custom",
-                  "renderAttributes": {
-                  },
+                  "renderAttributes": {},
                   "events": [
                     {
                       "name": "Delete Selected Member",
@@ -825,8 +726,7 @@
               "name": "Members Table",
               "text": "<div id='memberTableDiv'></div>",
               "visible": "values('Include Family Members')!==null",
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             },
             {
               "type": "field",
@@ -841,14 +741,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -866,14 +761,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -891,14 +781,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -909,8 +794,7 @@
               "name": "Update Information",
               "text": "If you want to also apply this update to PaySmart, please select the <b>Update PaySmart</b> option.",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             },
             {
               "type": "field",
@@ -925,14 +809,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "json",
               "renderType": "checkbox",
               "choicesResourceName": null,
@@ -951,8 +830,7 @@
               "title": null,
               "visible": "values('Update as a PaySmart variation')==\"Update Paysmart\"",
               "omitWhenHidden": true,
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "elements": [
                 {
                   "type": "content",
@@ -960,8 +838,7 @@
                   "name": "Date Affective HTML",
                   "text": "<div class=\"form-group required\" linkedField=\"Date Affective\">  \n  <label class=\"field-label\" for=\"dateaffective\">Date Affective</label>\n  <div id=\"dateaffective\"></div>\n</div>",
                   "visible": "!form('review') ",
-                  "renderAttributes": {
-                  }
+                  "renderAttributes": {}
                 },
                 {
                   "type": "field",
@@ -976,14 +853,9 @@
                   "requiredMessage": null,
                   "omitWhenHidden": false,
                   "pattern": null,
-                  "constraints": [
-
-                  ],
-                  "events": [
-
-                  ],
-                  "renderAttributes": {
-                  },
+                  "constraints": [],
+                  "events": [],
+                  "renderAttributes": {},
                   "dataType": "string",
                   "renderType": "date"
                 },
@@ -1000,14 +872,9 @@
                   "requiredMessage": null,
                   "omitWhenHidden": true,
                   "pattern": null,
-                  "constraints": [
-
-                  ],
-                  "events": [
-
-                  ],
-                  "renderAttributes": {
-                  },
+                  "constraints": [],
+                  "events": [],
+                  "renderAttributes": {},
                   "dataType": "string",
                   "renderType": "radio",
                   "choicesResourceName": null,
@@ -1029,8 +896,7 @@
                   "name": "Date Payments Resume HTML",
                   "text": "<div class=\"form-group required\" linkedField=\"Date Payments Resume\">  \n  <label class=\"field-label\" for=\"datepaymentsresume\">Date Payments Resume</label>\n  <div id=\"datepaymentsresume\"></div>\n</div>",
                   "visible": "!form('review') && values('Resume Date Option')==\"Resume Date\"",
-                  "renderAttributes": {
-                  }
+                  "renderAttributes": {}
                 },
                 {
                   "type": "field",
@@ -1045,14 +911,9 @@
                   "requiredMessage": null,
                   "omitWhenHidden": false,
                   "pattern": null,
-                  "constraints": [
-
-                  ],
-                  "events": [
-
-                  ],
-                  "renderAttributes": {
-                  },
+                  "constraints": [],
+                  "events": [],
+                  "renderAttributes": {},
                   "dataType": "string",
                   "renderType": "date"
                 },
@@ -1069,14 +930,9 @@
                   "requiredMessage": null,
                   "omitWhenHidden": true,
                   "pattern": null,
-                  "constraints": [
-
-                  ],
-                  "events": [
-
-                  ],
-                  "renderAttributes": {
-                  },
+                  "constraints": [],
+                  "events": [],
+                  "renderAttributes": {},
                   "dataType": "json",
                   "renderType": "checkbox",
                   "choicesResourceName": null,
@@ -1097,8 +953,7 @@
               "title": null,
               "visible": true,
               "omitWhenHidden": null,
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "elements": [
                 {
                   "type": "field",
@@ -1113,14 +968,9 @@
                   "requiredMessage": null,
                   "omitWhenHidden": false,
                   "pattern": null,
-                  "constraints": [
-
-                  ],
-                  "events": [
-
-                  ],
-                  "renderAttributes": {
-                  },
+                  "constraints": [],
+                  "events": [],
+                  "renderAttributes": {},
                   "dataType": "string",
                   "renderType": "text",
                   "rows": 1
@@ -1131,8 +981,7 @@
                   "name": "Person Signature",
                   "text": "<label class=\"field-label\">Person Signature</label><div id=\"person-signature-canvas\"/>",
                   "visible": true,
-                  "renderAttributes": {
-                  }
+                  "renderAttributes": {}
                 }
               ]
             }
@@ -1145,8 +994,7 @@
           "title": null,
           "visible": "values('Include Family Members')===null",
           "omitWhenHidden": true,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "content",
@@ -1154,8 +1002,7 @@
               "name": "Member Select Space",
               "text": "<div style=\"height:300px\"></div>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             }
           ]
         },
@@ -1166,8 +1013,7 @@
           "visible": true,
           "enabled": true,
           "renderType": "submit-page",
-          "renderAttributes": {
-          }
+          "renderAttributes": {}
         }
       ],
       "events": [

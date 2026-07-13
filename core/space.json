@@ -193,7 +193,7 @@
     {
       "name": "Kinetic Billing Server URL",
       "values": [
-        "https://gbbilling.com.au:8443/billingservice"
+        "http://gbbilling.com.au:8443/billingservice"
       ]
     },
     {
@@ -271,7 +271,7 @@
     {
       "name": "POS Service URL",
       "values": [
-        "https://services.gbmembers.net/billingservice/processPOS"
+        "http://localhost:8081/billingservice/processPOS"
       ]
     },
     {
@@ -467,9 +467,7 @@
     }
   ],
   "bundlePath": "",
-  "customTranslationContexts": [
-
-  ],
+  "customTranslationContexts": [],
   "defaultDatastoreFormConfirmationPage": null,
   "defaultDatastoreFormDisplayPage": null,
   "defaultLocale": "en-AU",
@@ -483,9 +481,7 @@
   "loginPage": null,
   "name": "GBMembers Template",
   "platformComponents": {
-    "agents": [
-
-    ]
+    "agents": []
   },
   "resetPasswordPage": null,
   "securityPolicies": [
@@ -517,10 +513,6 @@
   "sessionInactiveLimitInSeconds": 2592000,
   "sharedBundleBase": "hydrogen-v1",
   "slug": "gbmembers-template",
-  "trustedFrameDomains": [
-
-  ],
-  "trustedResourceDomains": [
-
-  ]
+  "trustedFrameDomains": [],
+  "trustedResourceDomains": []
 }

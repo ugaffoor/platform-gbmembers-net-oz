@@ -7,9 +7,7 @@
       ]
     }
   ],
-  "bridgedResources": [
-
-  ],
+  "bridgedResources": [],
   "customHeadContent": null,
   "description": "Form used to track Search History from within the system.",
   "indexDefinitions": [
@@ -105,14 +103,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -130,14 +123,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -155,14 +143,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -188,14 +171,10 @@
           "renderAttributes": {
             "class": "btn btn-link cancel-record"
           },
-          "events": [
-
-          ]
+          "events": []
         }
       ],
-      "events": [
-
-      ],
+      "events": [],
       "name": "Datastore",
       "renderType": "submittable",
       "type": "page"

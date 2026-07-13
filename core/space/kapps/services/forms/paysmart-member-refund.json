@@ -30,9 +30,7 @@
     {
       "model": "Members",
       "name": "Get Member",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${values('Members')}",
@@ -45,12 +43,8 @@
     {
       "model": "Members",
       "name": "Members",
-      "order": [
-
-      ],
-      "parameters": [
-
-      ],
+      "order": [],
+      "parameters": [],
       "qualification": "Get Billing Members",
       "status": "Active"
     }
@@ -79,8 +73,7 @@
           "title": "Select Member",
           "visible": "!form('review')",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -95,9 +88,7 @@
               "requiredMessage": "A member must be selected",
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Get Member",
@@ -115,8 +106,7 @@
                   "runIf": "values('Members')===null"
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "dropdown",
               "choicesResourceName": "Members",
@@ -132,8 +122,7 @@
               "name": "Members Select",
               "text": "<div id=\"selectMemberMenu\"></div>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             }
           ]
         },
@@ -144,8 +133,7 @@
           "title": "Student Information",
           "visible": "values('Members')!==null && ((typeof(loadingDetails) !== \"undefined\" && !loadingDetails) || form('review')) ",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -160,14 +148,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -185,9 +168,7 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Requested For",
@@ -202,8 +183,7 @@
                   ]
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -221,9 +201,7 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Requested For",
@@ -238,8 +216,7 @@
                   ]
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -257,14 +234,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -282,14 +254,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -307,14 +274,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -332,14 +294,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -357,14 +314,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -378,8 +330,7 @@
           "title": "",
           "visible": "values('Members')!==null && ((typeof(loadingDetails) !== \"undefined\" && !loadingDetails) || form('review')) ",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "content",
@@ -387,8 +338,7 @@
               "name": "Refund Date HTML",
               "text": "<div class=\"form-group required\" linkedField=\"Date of Refund\">  \n  <label class=\"field-label\" for=\"refunddate\">Date of Refund</label>\n  <div id=\"refunddate\"></div>\n</div>",
               "visible": "!form('review')",
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             },
             {
               "type": "field",
@@ -403,14 +353,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "date"
             },
@@ -427,14 +372,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 5
@@ -455,14 +395,9 @@
                 "regex": "^-?\\d*(.\\d+)?$",
                 "message": "Please enter a valid decimal value"
               },
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -476,8 +411,7 @@
           "title": null,
           "visible": true,
           "omitWhenHidden": null,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "content",
@@ -485,8 +419,7 @@
               "name": "Member Select Space",
               "text": "<div style=\"height:300px\"></div>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             }
           ]
         },
@@ -497,8 +430,7 @@
           "visible": true,
           "enabled": true,
           "renderType": "submit-page",
-          "renderAttributes": {
-          }
+          "renderAttributes": {}
         }
       ],
       "events": [

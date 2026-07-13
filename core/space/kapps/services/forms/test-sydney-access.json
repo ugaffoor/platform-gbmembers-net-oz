@@ -1,30 +1,20 @@
 {
   "anonymous": false,
-  "attributes": [
-
-  ],
+  "attributes": [],
   "bridgedResources": [
     {
       "model": "Program Fees",
       "name": "Fee",
-      "order": [
-
-      ],
-      "parameters": [
-
-      ],
+      "order": [],
+      "parameters": [],
       "qualification": "All",
       "status": "Active"
     },
     {
       "model": "GBSydneyFees",
       "name": "SydneyFees",
-      "order": [
-
-      ],
-      "parameters": [
-
-      ],
+      "order": [],
+      "parameters": [],
       "qualification": "All",
       "status": "Active"
     }
@@ -59,14 +49,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "dropdown",
           "choicesResourceName": "SydneyFees",
@@ -89,14 +74,9 @@
           "requiredMessage": null,
           "omitWhenHidden": null,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -108,8 +88,7 @@
           "visible": true,
           "enabled": true,
           "renderType": "submit-page",
-          "renderAttributes": {
-          }
+          "renderAttributes": {}
         }
       ],
       "events": [

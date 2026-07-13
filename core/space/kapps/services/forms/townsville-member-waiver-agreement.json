@@ -30,9 +30,7 @@
     {
       "model": "Members",
       "name": "Get Member",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${values('Members')}",
@@ -45,9 +43,7 @@
     {
       "model": "Terms and Conditions",
       "name": "Get Waiver",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "Gracie Barra Waiver",
@@ -60,19 +56,13 @@
     {
       "model": "Members",
       "name": "Members",
-      "order": [
-
-      ],
-      "parameters": [
-
-      ],
+      "order": [],
+      "parameters": [],
       "qualification": "Get Active and Frozen Members",
       "status": "Active"
     }
   ],
-  "categorizations": [
-
-  ],
+  "categorizations": [],
   "customHeadContent": "<style>\n.waiverButtons {\n    margin: 20px;\n}\n.waiverButtons button {\n\t\tbackground-color: #4d5059;\n    color: white;\n  \tborder-radius: 5px;\n}  \n</style>\n<script>\n  var termsInfo;\n  \n  function expandWaiverDetails(){\n    debugger;\n    termsInfo=termsInfo.replaceAll(\"$studentName$\", K('field[Student First Name]').value()+\" \"+K('field[Student Last Name]').value());\n    termsInfo=termsInfo.replaceAll(\"$legalName$\", K('space').attributes('School Legal Name'));\n    termsInfo=termsInfo.replaceAll(\"$schoolName$\", K('space').attributes('School Name'));\n    termsInfo=termsInfo.replaceAll(\"$address$\", K('space').attributes('School Address'));\n    termsInfo=termsInfo.replaceAll(\"$acn$\", K('space').attributes('ACN'));\n    termsInfo=termsInfo.replaceAll(\"$email$\", K('space').attributes('School Email'));\n    termsInfo=termsInfo.replaceAll(\"$billingCompany$\", K('space').attributes('Billing Company'));\n\t\ttermsInfo=termsInfo.replaceAll(\"$state$\", K('space').attributes('School State'));\n\t\ttermsInfo=termsInfo.replaceAll(\"$coolingPeriod$\", K('space').attributes('Cooling Period'));\n\t\ttermsInfo=termsInfo.replaceAll(\"$online_individual_price$\", K('space').attributes('Online Week Individual Price'));\n\t\ttermsInfo=termsInfo.replaceAll(\"$online_family_price$\", K('space').attributes('Online Week Family Price'));\n    \n    K('field[Waiver Information Text]').value(termsInfo);    \n    $(\"#waiverInformation\").html(termsInfo);    \n  }\n  function GetURLParameter(sParam){\n    arr=window.location.hash.split(sParam+\"=\");\n    if (arr.length>0){\n      return arr[1];\n    }\n    return null;\n  }  \n  \n  function agreeTerms() {\n    K('field[Agreement]').value(\"Agreed\");\n    K('form').submitPage();\n  }\n  function noAgreeTerms() {\n    K('field[Agreement]').value(\"NOT Agreed\");\n    K('form').submitPage();\n  }\n</script>\n\n<script>\nfunction enabledAddressEdit(){\n  K('field[Address]').enable();\n  K('field[City]').enable();\n  K('field[State]').enable();\n  K('field[Postcode]').enable();\n}\nfunction geolocate() {\n  if (navigator.geolocation) {\n    navigator.geolocation.getCurrentPosition(function(position) {\n      var geolocation = {\n        lat: position.coords.latitude,\n        lng: position.coords.longitude\n      };\n      var circle = new google.maps.Circle(\n          {center: geolocation, radius: position.coords.accuracy});\n      autocomplete.setBounds(circle.getBounds());\n    });\n  }\n}\nfunction fillInAddress() {\n  K(\"field[Address]\").value(\"\");\n\n  // Get the place details from the autocomplete object.\n  var place = autocomplete.getPlace();\n\ndebugger;\n  // Get each component of the address from the place details,\n  // and then fill-in the corresponding field on the form.\n  for (var i = 0; i < place.address_components.length; i++) {\n    var addressType = place.address_components[i].types[0];\n\n    if (addressType===\"street_number\") {\n    \tK(\"field[Address]\").value(place.address_components[i][\"long_name\"]);\n    }\n    if (addressType===\"route\") {\n    \tK(\"field[Address]\").value(K(\"field[Address]\").value()+\" \"+place.address_components[i][\"long_name\"]);\n    }\n    if (addressType===\"locality\") {\n    \tK(\"field[City]\").value(place.address_components[i][\"long_name\"]);\n    }\n    if (addressType===\"administrative_area_level_1\") {\n    \tK(\"field[State]\").value(place.address_components[i][\"short_name\"]);\n    }\n    if (addressType===\"postal_code\") {\n    \tK(\"field[Postcode]\").value(place.address_components[i][\"short_name\"]);\n    }\n  }\n}  \nfunction initAutocomplete() {\n  debugger;\n  // Create the autocomplete object, restricting the search predictions to\n  // geographical location types.\n  autocomplete = new google.maps.places.Autocomplete(\n      document.getElementById('autocomplete'), {types: ['geocode']});\n\n  // Avoid paying for data that you don't need by restricting the set of\n  // place fields that are returned to just the address components.\n  autocomplete.setFields(['address_component']);\n\n  // When the user selects an address from the drop-down, populate the\n  // address fields in the form.\n  autocomplete.addListener('place_changed', fillInAddress);\n}  \n</script>\n\n<script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyA-tujnpf8Jy33hVaJ_9GtRdMgHw4jvnwo&libraries=places&callback=initAutocomplete\"\n        async defer>\n</script>",
   "description": "Capture a Members agreement for the GB Waiver.",
   "name": "Townsville Member Waiver Agreement",
@@ -90,8 +80,7 @@
           "title": "Select Member",
           "visible": "!form('review')",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -106,9 +95,7 @@
               "requiredMessage": "A member must be selected",
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Get Member",
@@ -126,15 +113,12 @@
                   "runIf": "values('Members')===null"
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "dropdown",
               "choicesResourceName": null,
               "choicesRunIf": null,
-              "choices": [
-
-              ]
+              "choices": []
             },
             {
               "type": "content",
@@ -142,8 +126,7 @@
               "name": "Members Select",
               "text": "<div id=\"selectMemberMenu\"></div>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             }
           ]
         },
@@ -154,8 +137,7 @@
           "title": "Student Information",
           "visible": true,
           "omitWhenHidden": null,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -170,14 +152,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -195,9 +172,7 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Requested For",
@@ -212,8 +187,7 @@
                   ]
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -231,9 +205,7 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Requested For",
@@ -248,8 +220,7 @@
                   ]
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -267,14 +238,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -285,8 +251,7 @@
               "name": "Autocomplete",
               "text": "<div id=\"locationField\">\n  <input id=\"autocomplete\"\n         class=\"form-control\"\n         placeholder=\"Enter your address\"\n         onFocus=\"geolocate()\"\n         type=\"text\"/>\n</div>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             },
             {
               "type": "section",
@@ -295,11 +260,8 @@
               "title": null,
               "visible": "(values('Members')!==null) && ((typeof(loadingDetails) !== \"undefined\" && !loadingDetails) || form('review')) ",
               "omitWhenHidden": true,
-              "renderAttributes": {
-              },
-              "elements": [
-
-              ]
+              "renderAttributes": {},
+              "elements": []
             },
             {
               "type": "field",
@@ -314,14 +276,9 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -339,14 +296,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -364,14 +316,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -389,14 +336,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -414,14 +356,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -439,14 +376,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -464,9 +396,7 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Invalid date",
@@ -476,8 +406,7 @@
                   "runIf": "K('field[Date of birth]').value()===\"Invalid date\""
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "date"
             },
@@ -488,8 +417,7 @@
               "title": "Emergency Contact Information",
               "visible": true,
               "omitWhenHidden": null,
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "elements": [
                 {
                   "type": "field",
@@ -504,14 +432,9 @@
                   "requiredMessage": null,
                   "omitWhenHidden": null,
                   "pattern": null,
-                  "constraints": [
-
-                  ],
-                  "events": [
-
-                  ],
-                  "renderAttributes": {
-                  },
+                  "constraints": [],
+                  "events": [],
+                  "renderAttributes": {},
                   "dataType": "string",
                   "renderType": "text",
                   "rows": 1
@@ -529,14 +452,9 @@
                   "requiredMessage": null,
                   "omitWhenHidden": null,
                   "pattern": null,
-                  "constraints": [
-
-                  ],
-                  "events": [
-
-                  ],
-                  "renderAttributes": {
-                  },
+                  "constraints": [],
+                  "events": [],
+                  "renderAttributes": {},
                   "dataType": "string",
                   "renderType": "text",
                   "rows": 1
@@ -554,14 +472,9 @@
                   "requiredMessage": null,
                   "omitWhenHidden": null,
                   "pattern": null,
-                  "constraints": [
-
-                  ],
-                  "events": [
-
-                  ],
-                  "renderAttributes": {
-                  },
+                  "constraints": [],
+                  "events": [],
+                  "renderAttributes": {},
                   "dataType": "string",
                   "renderType": "text",
                   "rows": 1
@@ -577,8 +490,7 @@
           "title": null,
           "visible": false,
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -593,14 +505,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -611,8 +518,7 @@
               "name": "WaiverWaiver Information",
               "text": "<span id=\"waiverInformation\"/>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             },
             {
               "type": "section",
@@ -621,8 +527,7 @@
               "title": null,
               "visible": true,
               "omitWhenHidden": null,
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "elements": [
                 {
                   "type": "field",
@@ -637,14 +542,9 @@
                   "requiredMessage": "Signature required",
                   "omitWhenHidden": true,
                   "pattern": null,
-                  "constraints": [
-
-                  ],
-                  "events": [
-
-                  ],
-                  "renderAttributes": {
-                  },
+                  "constraints": [],
+                  "events": [],
+                  "renderAttributes": {},
                   "dataType": "string",
                   "renderType": "text",
                   "rows": 1
@@ -655,8 +555,7 @@
                   "name": "Person Signature",
                   "text": "<span>\n<p>  \n<i>I hereby acknowledge and understand that Brazilian Jiu Jitsu is a physical activity and learning self-defense skills involves some physical contact. GB Oceania Association Pty Ltd, <span id=\"legalName\"></span> and or its staff and student are not to be hold liable or responsible for any risks and/or injuries as a result of training Brazilian Jiu-Jitsu. \n  </i></p>\n</span>\n<label class=\"field-label required\">Person Signature</label><div id=\"person-signature-canvas\"/>",
                   "visible": true,
-                  "renderAttributes": {
-                  }
+                  "renderAttributes": {}
                 }
               ]
             },
@@ -666,8 +565,7 @@
               "name": "Waiver Buttons",
               "text": "<div class=\"waiverButtons\">\n  <button class=\"agree\" onclick=\"agreeTerms()\">\n    I Acknowledge and Accept the terms\n  </button>\n  <button class=\"notagree\" onclick=\"noAgreeTerms()\">\n    I DO NOT Acknowledge and Accept the terms\n  </button>\n</div>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             }
           ]
         },
@@ -684,14 +582,9 @@
           "requiredMessage": null,
           "omitWhenHidden": false,
           "pattern": null,
-          "constraints": [
-
-          ],
-          "events": [
-
-          ],
-          "renderAttributes": {
-          },
+          "constraints": [],
+          "events": [],
+          "renderAttributes": {},
           "dataType": "string",
           "renderType": "text",
           "rows": 1
@@ -703,8 +596,7 @@
           "title": null,
           "visible": true,
           "omitWhenHidden": null,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "content",
@@ -712,8 +604,7 @@
               "name": "Member Select Space",
               "text": "<div style=\"height:300px\"></div>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             }
           ]
         },
@@ -724,8 +615,7 @@
           "visible": false,
           "enabled": true,
           "renderType": "submit-page",
-          "renderAttributes": {
-          }
+          "renderAttributes": {}
         }
       ],
       "events": [

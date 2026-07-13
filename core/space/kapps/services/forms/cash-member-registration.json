@@ -30,9 +30,7 @@
     {
       "model": "Members",
       "name": "Get Family Member",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${values('Family Member')}",
@@ -45,9 +43,7 @@
     {
       "model": "Members",
       "name": "Get Member",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${values('Members')}",
@@ -60,9 +56,7 @@
     {
       "model": "Program Fees",
       "name": "Get Program",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${values('Programs')}",
@@ -75,9 +69,7 @@
     {
       "model": "Terms and Conditions",
       "name": "Get Terms and Conditions",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "Paysmart Member Registration",
@@ -90,21 +82,15 @@
     {
       "model": "Members",
       "name": "Members",
-      "order": [
-
-      ],
-      "parameters": [
-
-      ],
+      "order": [],
+      "parameters": [],
       "qualification": "Active Members",
       "status": "Active"
     },
     {
       "model": "Program Fees",
       "name": "Program Fees",
-      "order": [
-
-      ],
+      "order": [],
       "parameters": [
         {
           "mapping": "${values('Payment Frequency')}",
@@ -139,8 +125,7 @@
           "title": "Select Member",
           "visible": "!form('review')",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -155,9 +140,7 @@
               "requiredMessage": "A member must be selected",
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Get Members",
@@ -175,8 +158,7 @@
                   "runIf": "values('Members')===null"
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "dropdown",
               "choicesResourceName": "Members",
@@ -192,8 +174,7 @@
               "name": "Members Select",
               "text": "<div id=\"selectMemberMenu\"></div>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             }
           ]
         },
@@ -204,8 +185,7 @@
           "title": "Student Information",
           "visible": false,
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -220,14 +200,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -245,9 +220,7 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Requested For",
@@ -262,8 +235,7 @@
                   ]
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -281,9 +253,7 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Requested For",
@@ -298,8 +268,7 @@
                   ]
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -317,14 +286,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -342,14 +306,9 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -361,8 +320,7 @@
               "title": "Family Members",
               "visible": true,
               "omitWhenHidden": null,
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "elements": [
                 {
                   "type": "field",
@@ -377,14 +335,9 @@
                   "requiredMessage": null,
                   "omitWhenHidden": null,
                   "pattern": null,
-                  "constraints": [
-
-                  ],
-                  "events": [
-
-                  ],
-                  "renderAttributes": {
-                  },
+                  "constraints": [],
+                  "events": [],
+                  "renderAttributes": {},
                   "dataType": "string",
                   "renderType": "radio",
                   "choicesResourceName": null,
@@ -411,8 +364,7 @@
           "title": "Program Information",
           "visible": "values('Include Family Members')!==null",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -427,9 +379,7 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Frequency Label",
@@ -439,8 +389,7 @@
                   "runIf": ""
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "radio",
               "choicesResourceName": null,
@@ -480,9 +429,7 @@
                 "regex": "^\\d+$",
                 "message": "Please enter a valid number"
               },
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Term End Date",
@@ -491,8 +438,7 @@
                   "code": "bundle.setTermEndDate();"
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -504,8 +450,7 @@
               "title": null,
               "visible": true,
               "omitWhenHidden": null,
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "elements": [
                 {
                   "type": "field",
@@ -520,9 +465,7 @@
                   "requiredMessage": null,
                   "omitWhenHidden": null,
                   "pattern": null,
-                  "constraints": [
-
-                  ],
+                  "constraints": [],
                   "events": [
                     {
                       "name": "Set Term End Date",
@@ -531,8 +474,7 @@
                       "code": "bundle.setTermEndDate();"
                     }
                   ],
-                  "renderAttributes": {
-                  },
+                  "renderAttributes": {},
                   "dataType": "string",
                   "renderType": "date"
                 },
@@ -549,14 +491,9 @@
                   "requiredMessage": null,
                   "omitWhenHidden": null,
                   "pattern": null,
-                  "constraints": [
-
-                  ],
-                  "events": [
-
-                  ],
-                  "renderAttributes": {
-                  },
+                  "constraints": [],
+                  "events": [],
+                  "renderAttributes": {},
                   "dataType": "string",
                   "renderType": "date"
                 }
@@ -575,9 +512,7 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Get Family Member",
@@ -598,8 +533,7 @@
                   "bridgedResourceName": "Get Family Member"
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "dropdown",
               "choicesResourceName": "Members",
@@ -622,14 +556,9 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -647,14 +576,9 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -672,9 +596,7 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Get Program",
@@ -701,8 +623,7 @@
                   "runIf": ""
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "dropdown",
               "choicesResourceName": "Program Fees",
@@ -725,14 +646,9 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -750,14 +666,9 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -775,9 +686,7 @@
               "requiredMessage": null,
               "omitWhenHidden": true,
               "pattern": null,
-              "constraints": [
-
-              ],
+              "constraints": [],
               "events": [
                 {
                   "name": "Set Fee as Individual",
@@ -793,8 +702,7 @@
                   "runIf": "values('Include Family Members')===\"No\""
                 }
               ],
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -806,8 +714,7 @@
               "title": null,
               "visible": "values('Include Family Members')!==null",
               "omitWhenHidden": true,
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "elements": [
                 {
                   "type": "button",
@@ -816,8 +723,7 @@
                   "visible": true,
                   "enabled": true,
                   "renderType": "custom",
-                  "renderAttributes": {
-                  },
+                  "renderAttributes": {},
                   "events": [
                     {
                       "name": "Set Current Member",
@@ -835,8 +741,7 @@
                   "visible": "values('Include Family Members')===\"Yes\"",
                   "enabled": true,
                   "renderType": "custom",
-                  "renderAttributes": {
-                  },
+                  "renderAttributes": {},
                   "events": [
                     {
                       "name": "Add Family Member",
@@ -854,8 +759,7 @@
                   "visible": true,
                   "enabled": true,
                   "renderType": "custom",
-                  "renderAttributes": {
-                  },
+                  "renderAttributes": {},
                   "events": [
                     {
                       "name": "Delete Selected Member",
@@ -874,8 +778,7 @@
               "name": "Members Table",
               "text": "<div id='memberTableDiv'></div>",
               "visible": "values('Include Family Members')!==null",
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             },
             {
               "type": "field",
@@ -890,14 +793,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -915,14 +813,9 @@
               "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -943,14 +836,9 @@
                 "regex": "^-?\\d*(.\\d+)?$",
                 "message": "Please enter a valid decimal value"
               },
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -964,8 +852,7 @@
           "title": null,
           "visible": "values('Include Family Members')!==null",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "field",
@@ -980,12 +867,8 @@
               "requiredMessage": null,
               "omitWhenHidden": null,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
+              "constraints": [],
+              "events": [],
               "renderAttributes": {
                 "class": "acceptTerms"
               },
@@ -1007,8 +890,7 @@
               "title": null,
               "visible": false,
               "omitWhenHidden": false,
-              "renderAttributes": {
-              },
+              "renderAttributes": {},
               "elements": [
                 {
                   "type": "field",
@@ -1023,14 +905,9 @@
                   "requiredMessage": null,
                   "omitWhenHidden": false,
                   "pattern": null,
-                  "constraints": [
-
-                  ],
-                  "events": [
-
-                  ],
-                  "renderAttributes": {
-                  },
+                  "constraints": [],
+                  "events": [],
+                  "renderAttributes": {},
                   "dataType": "string",
                   "renderType": "text",
                   "rows": 1
@@ -1041,8 +918,7 @@
                   "name": "Terms Information",
                   "text": "<span id=\"termsInformation\"/>",
                   "visible": true,
-                  "renderAttributes": {
-                  }
+                  "renderAttributes": {}
                 }
               ]
             }
@@ -1055,8 +931,7 @@
           "title": "Signatures",
           "visible": "values('Include Family Members')!==null",
           "omitWhenHidden": false,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "content",
@@ -1064,8 +939,7 @@
               "name": "Student Signature",
               "text": "<label class=\"field-label required\">Student Signature</label>\n<div id=\"student-signature-canvas\"/>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             },
             {
               "type": "field",
@@ -1080,14 +954,9 @@
               "requiredMessage": "Student Signature is required",
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -1098,8 +967,7 @@
               "name": "Parent Signature",
               "text": "<label class=\"field-label required\">Parent Signature</label>\n<div id=\"parent-signature-canvas\"/>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             },
             {
               "type": "field",
@@ -1114,14 +982,9 @@
               "requiredMessage": "Parent Signature is required",
               "omitWhenHidden": false,
               "pattern": null,
-              "constraints": [
-
-              ],
-              "events": [
-
-              ],
-              "renderAttributes": {
-              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
               "rows": 1
@@ -1135,8 +998,7 @@
           "title": null,
           "visible": "values('Include Family Members')===null",
           "omitWhenHidden": true,
-          "renderAttributes": {
-          },
+          "renderAttributes": {},
           "elements": [
             {
               "type": "content",
@@ -1144,8 +1006,7 @@
               "name": "Member Select Space",
               "text": "<div style=\"height:300px\"></div>",
               "visible": true,
-              "renderAttributes": {
-              }
+              "renderAttributes": {}
             }
           ]
         },
@@ -1156,8 +1017,7 @@
           "visible": true,
           "enabled": true,
           "renderType": "submit-page",
-          "renderAttributes": {
-          }
+          "renderAttributes": {}
         }
       ],
       "events": [
