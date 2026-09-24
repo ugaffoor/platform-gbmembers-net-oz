@@ -46,6 +46,11 @@
   },
   {
     "allowsMultiple": false,
+    "description": "Set to YES to allow the display of the Price Increase feature",
+    "name": "Allow Price Increase"
+  },
+  {
+    "allowsMultiple": false,
     "description": "The Queue kapp form which approvals should be created in (Overridden by Kapp and Form Attributes)",
     "name": "Approval Form Slug"
   },
@@ -223,6 +228,16 @@
     "allowsMultiple": false,
     "description": "Weekly,Fortnightly,Monthly,Quarterly",
     "name": "Payment Frequencies"
+  },
+  {
+    "allowsMultiple": false,
+    "description": "YES - to apply admin. If not set or exist we will not display and add admin Fee.",
+    "name": "PaySmart Apply Admin Fee"
+  },
+  {
+    "allowsMultiple": false,
+    "description": "Set to \"YES\" to disallow the use of a Credit Card.\nThis will be set in conjunction with setting \"PaySmart Apply Admin Fee\" set to \"YES\"",
+    "name": "PaySmart No Credit Card Allowed"
   },
   {
     "allowsMultiple": false,

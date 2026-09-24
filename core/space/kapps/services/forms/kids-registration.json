@@ -1254,7 +1254,7 @@
             {
               "type": "field",
               "name": "Any medical conditions we need to be aware of",
-              "label": "Any medical conditions we need to be aware of ?",
+              "label": "Any medical conditions we need to be aware of ?<br><br><i>Examples include allergies, relevant diagnoses (i.e., mental health conditions), and past or present injuries</i><br>",
               "key": "f75",
               "defaultValue": null,
               "defaultResourceName": null,

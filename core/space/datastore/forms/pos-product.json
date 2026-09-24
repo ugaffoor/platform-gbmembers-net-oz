@@ -527,7 +527,7 @@
           "key": "f19",
           "defaultValue": null,
           "defaultResourceName": null,
-          "visible": "values('Product Type')===\"Package\"",
+          "visible": false,
           "enabled": true,
           "required": false,
           "requiredMessage": null,
@@ -538,12 +538,9 @@
           "renderAttributes": {},
           "dataType": "json",
           "renderType": "checkbox",
-          "choicesResourceName": "Get Products",
+          "choicesResourceName": null,
           "choicesRunIf": null,
-          "choices": {
-            "label": "${resources('Get Products:Name')}-${resources('Get Products:Colour')}",
-            "value": "${resources('Get Products:id')}"
-          }
+          "choices": []
         },
         {
           "type": "field",

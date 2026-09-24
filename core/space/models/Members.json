@@ -2,6 +2,12 @@
   "activeMappingName": "Members",
   "attributes": [
     {
+      "name": "Additional Program 1"
+    },
+    {
+      "name": "Additional Program 2"
+    },
+    {
       "name": "Address"
     },
     {
@@ -21,6 +27,9 @@
     },
     {
       "name": "Billing Parent Member"
+    },
+    {
+      "name": "Billing Payment Period"
     },
     {
       "name": "Billing Payment Type"
@@ -128,10 +137,10 @@
       "name": "State"
     },
     {
-      "name": "Suburb"
+      "name": "Status"
     },
     {
-      "name": "useSubAccount"
+      "name": "Suburb"
     }
   ],
   "mappings": [
@@ -311,8 +320,20 @@
           "structureField": "${fields('values[POS Profile ID]')}"
         },
         {
-          "name": "useSubAccount",
-          "structureField": "${fields('values[useSubAccount]')}"
+          "name": "Status",
+          "structureField": "${fields('values[Status]')}"
+        },
+        {
+          "name": "Additional Program 1",
+          "structureField": "${fields('values[Additional Program 1]')}"
+        },
+        {
+          "name": "Additional Program 2",
+          "structureField": "${fields('values[Additional Program 2]')}"
+        },
+        {
+          "name": "Billing Payment Period",
+          "structureField": "${fields('values[Billing Payment Period]')}"
         }
       ],
       "bridgeSlug": "kinetic-core",
@@ -336,7 +357,7 @@
         },
         {
           "name": "Get Member by Username",
-          "query": "kappSlug=gbmembers&formSlug=member&q=values[Member ID]=\"${parameters(\"username\")}\""
+          "query": "kappSlug=gbmembers&formSlug=member&q=values[Member ID]=\"${parameters(\"username\")}\" AND (values[Status]=\"Active\" OR values[Status]=\"Pending Freeze\" OR values[Status]=\"Pending Cancellation\")"
         },
         {
           "name": "Get Active and Frozen Members",
@@ -345,6 +366,10 @@
         {
           "name": "Get Pending Cancellation Members",
           "query": "kappSlug=gbmembers&formSlug=member&q=values[Status]=\"Pending Cancellation\""
+        },
+        {
+          "name": "Get Active Billing Members",
+          "query": "kappSlug=gbmembers&formSlug=member&q=values[Billing User]=\"YES\" AND values[Status]=\"Active\""
         }
       ],
       "structure": "Submissions"
@@ -359,6 +384,11 @@
     },
     {
       "name": "Get Active and Frozen Members",
+      "parameters": [],
+      "resultType": "Multiple"
+    },
+    {
+      "name": "Get Active Billing Members",
       "parameters": [],
       "resultType": "Multiple"
     },

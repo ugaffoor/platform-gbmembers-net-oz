@@ -1,5 +1,5 @@
 {
-  "anonymous": false,
+  "anonymous": true,
   "attributes": [
     {
       "name": "Cancel Disabled",
@@ -89,6 +89,16 @@
       "displayPage": null,
       "elements": [
         {
+          "type": "content",
+          "renderType": "html",
+          "name": "GB Logo",
+          "text": "<img src=\"https://gbfms-files.s3-ap-southeast-2.amazonaws.com/GB+Name+Log.png\" alt=\"GB Logo\" class=\"GBLogo\">",
+          "visible": true,
+          "renderAttributes": {
+            "class": "logo"
+          }
+        },
+        {
           "type": "section",
           "renderType": null,
           "name": "Emailed Message",
@@ -101,7 +111,7 @@
               "type": "content",
               "renderType": "html",
               "name": "Emailed Member Info",
-              "text": "<h1>Paysmart Change Payment Type<h1>\n  <p>Change Member payment type, such as Credit Card or Bank Details</p>",
+              "text": "<h1>Paysmart Change Payment Type<h1>\n",
               "visible": true,
               "renderAttributes": {}
             }
@@ -129,28 +139,9 @@
         {
           "type": "section",
           "renderType": null,
-          "name": "Not Billing Member",
-          "title": "",
-          "visible": "values('Billing User')!==\"YES\" && !K(\"identity\").teams.includes(\"Role::Program Managers\")",
-          "omitWhenHidden": true,
-          "renderAttributes": {},
-          "elements": [
-            {
-              "type": "content",
-              "renderType": "html",
-              "name": "Error",
-              "text": "You are not a valid PaySmart account user.",
-              "visible": true,
-              "renderAttributes": {}
-            }
-          ]
-        },
-        {
-          "type": "section",
-          "renderType": null,
-          "name": "Select Member",
-          "title": "Select Member",
-          "visible": "!form('review')",
+          "name": "Student Information",
+          "title": "Student Information",
+          "visible": false,
           "omitWhenHidden": false,
           "renderAttributes": {},
           "elements": [
@@ -158,59 +149,22 @@
               "type": "field",
               "name": "Members",
               "label": "Members",
-              "key": "f38",
+              "key": "f52",
               "defaultValue": null,
               "defaultResourceName": null,
               "visible": false,
               "enabled": true,
-              "required": true,
-              "requiredMessage": "A member must be selected",
+              "required": false,
+              "requiredMessage": null,
               "omitWhenHidden": false,
               "pattern": null,
               "constraints": [],
-              "events": [
-                {
-                  "name": "Get Members",
-                  "type": "Change",
-                  "action": "Custom",
-                  "code": "K('bridgedResource[Get Member]').load({\n  attributes: ['Member ID', 'First Name', 'Last Name'],\n  values: {'ID' : 'Allen'},\n  success: function(bridgedData) {\n    K('field[Member ID]').value(bridgedData['Member ID']);\n    K('field[Student First Name]').value(bridgedData['First Name']);\n    K('field[Student Last Name]').value(bridgedData['Last Name']);\n    K('field[Billing Customer Id]').value(bridgedData['Billing Customer Id']);\n    K('field[useSubAccount]').value(bridgedData['useSubAccount']);\n    K('field[DOB]').value(bridgedData['DOB']);\n    K('section[Student Information]').show();\n  }\n});",
-                  "bridgedResourceName": null,
-                  "runIf": "values('Members')!==\"\""
-                },
-                {
-                  "name": "Clear Member Details",
-                  "type": "Change",
-                  "action": "Custom",
-                  "code": "K('field[Member ID]').value(\"\");\nK('field[Student First Name]').value(\"\");\nK('field[Student Last Name]').value(\"\");\nK('field[DOB]').value(\"\");\nK('field[Billing Customer Id]').value(\"\");\nK('field[useSubAccount]').value(\"\");\n\nK('section[Student Information]').hide();\n\nK('section[Member Select Space]').show();    \n",
-                  "runIf": "values('Members')===null"
-                }
-              ],
+              "events": [],
               "renderAttributes": {},
               "dataType": "string",
-              "renderType": "dropdown",
-              "choicesResourceName": null,
-              "choicesRunIf": null,
-              "choices": []
+              "renderType": "text",
+              "rows": 1
             },
-            {
-              "type": "content",
-              "renderType": "html",
-              "name": "Members Select",
-              "text": "<div id=\"selectMemberMenu\"></div>",
-              "visible": true,
-              "renderAttributes": {}
-            }
-          ]
-        },
-        {
-          "type": "section",
-          "renderType": null,
-          "name": "Student Information",
-          "title": "Student Information",
-          "visible": false,
-          "omitWhenHidden": false,
-          "renderAttributes": {},
-          "elements": [
             {
               "type": "field",
               "name": "Member ID",
@@ -236,8 +190,8 @@
               "name": "Member GUID",
               "label": "Member GUID",
               "key": "f48",
-              "defaultValue": "${resources('Get Member by Username:id')}",
-              "defaultResourceName": "Get Member by Username",
+              "defaultValue": "",
+              "defaultResourceName": "",
               "visible": false,
               "enabled": true,
               "required": false,
@@ -245,7 +199,14 @@
               "omitWhenHidden": false,
               "pattern": null,
               "constraints": [],
-              "events": [],
+              "events": [
+                {
+                  "name": "Get Member",
+                  "type": "Change",
+                  "action": "Custom",
+                  "code": "K('bridgedResource[Get Member]').load({\n  attributes: ['Member ID', 'First Name', 'Last Name'],\n  values: {},\n  success: function(bridgedData) {\n    K('field[Member ID]').value(bridgedData['Member ID']);\n    K('field[Student First Name]').value(bridgedData['First Name']);\n    K('field[Student Last Name]').value(bridgedData['Last Name']);\n    K('field[Billing Customer Id]').value(bridgedData['Billing Customer Id']);\n    K('field[useSubAccount]').value(bridgedData['useSubAccount']);\n    K('field[DOB]').value(bridgedData['DOB']);\n    K('section[Student Information]').show();\n  }\n});"
+                }
+              ],
               "renderAttributes": {},
               "dataType": "string",
               "renderType": "text",
@@ -612,30 +573,6 @@
               "choicesRunIf": null,
               "choices": [
                 {
-                  "label": "2020",
-                  "value": "2020"
-                },
-                {
-                  "label": "2021",
-                  "value": "2021"
-                },
-                {
-                  "label": "2022",
-                  "value": "2022"
-                },
-                {
-                  "label": "2023",
-                  "value": "2023"
-                },
-                {
-                  "label": "2024",
-                  "value": "2024"
-                },
-                {
-                  "label": "2025",
-                  "value": "2025"
-                },
-                {
                   "label": "2026",
                   "value": "2026"
                 },
@@ -743,29 +680,6 @@
             },
             {
               "type": "field",
-              "name": "Account Number",
-              "label": "Account Number",
-              "key": "f24",
-              "defaultValue": null,
-              "defaultResourceName": null,
-              "visible": true,
-              "enabled": true,
-              "required": "values('Payment Method') === 'Bank Account'",
-              "requiredMessage": null,
-              "omitWhenHidden": null,
-              "pattern": {
-                "regex": "^([0-9]){6,9}$",
-                "message": "Account number must be 6 to 9 digit number"
-              },
-              "constraints": [],
-              "events": [],
-              "renderAttributes": {},
-              "dataType": "string",
-              "renderType": "text",
-              "rows": 1
-            },
-            {
-              "type": "field",
               "name": "BSB",
               "label": "BSB",
               "key": "f25",
@@ -779,6 +693,29 @@
               "pattern": {
                 "regex": "^([0-9]){6}$",
                 "message": "BSB must be 6 digit number"
+              },
+              "constraints": [],
+              "events": [],
+              "renderAttributes": {},
+              "dataType": "string",
+              "renderType": "text",
+              "rows": 1
+            },
+            {
+              "type": "field",
+              "name": "Account Number",
+              "label": "Account Number",
+              "key": "f24",
+              "defaultValue": null,
+              "defaultResourceName": null,
+              "visible": true,
+              "enabled": true,
+              "required": "values('Payment Method') === 'Bank Account'",
+              "requiredMessage": null,
+              "omitWhenHidden": null,
+              "pattern": {
+                "regex": "^([0-9]){6,9}$",
+                "message": "Account number must be 6 to 9 digit number"
               },
               "constraints": [],
               "events": [],
@@ -851,8 +788,8 @@
           "type": "button",
           "label": "Submit",
           "name": "Submit Button",
-          "visible": "values('Billing User')==\"YES\" || K(\"identity\").teams.includes(\"Role::Program Managers\")",
-          "enabled": true,
+          "visible": true,
+          "enabled": "Object.keys(K('form').validate()).length===0",
           "renderType": "submit-page",
           "renderAttributes": {}
         }
@@ -862,14 +799,14 @@
           "name": "Load Signatures",
           "type": "Load",
           "action": "Custom",
-          "code": "bundle.config.widgets.signatureCanvas({\n  element: K(\"form\").find(\"#payment-signature-canvas\")[0],\n  initialValue: K(\"field[Encoded Payment Signature]\").value(),\n  onChange: function(value) {\n\t  K(\"field[Encoded Payment Signature]\").value(value);\n\t},\n  height: 250,\n  width: 500,\n  disable: form('review'),\n  ref: function(el) {\n    window.representativeSignaturePad = el;\n  },\n});\n",
+          "code": "bundle.GetURLParameter = function(sParam){\n    if (window.location.hash.indexOf(\"?\")!==-1) {\n      var params = window.location.hash.split(\"?\")[1]\n        .substring(0)\n        .split(\"&\")\n        .map(v => v.split(\"=\"))\n        .reduce((map, [key, value]) => map.set(key, decodeURIComponent(value)), new Map());    \n      \n      if (params.get(sParam)!==undefined) {\n        return params.get(sParam);\n      } else {\n       \treturn null; \n      }\n    }\n    return null;\n  }  \n\n\nbundle.config.widgets.signatureCanvas({\n  element: K(\"form\").find(\"#payment-signature-canvas\")[0],\n  initialValue: K(\"field[Encoded Payment Signature]\").value(),\n  onChange: function(value) {\n\t  K(\"field[Encoded Payment Signature]\").value(value);\n\t},\n  height: 250,\n  width: 500,\n  disable: form('review'),\n  ref: function(el) {\n    window.representativeSignaturePad = el;\n  },\n});\n",
           "runIf": ""
         },
         {
           "name": "Load Members Select",
           "type": "Load",
           "action": "Custom",
-          "code": "  function GetURLParameter(sParam){\n    arr=window.location.hash.split(sParam+\"=\");\n    if (arr.length>0){\n      return arr[1];\n    }\n    return null;\n  }  \ndebugger;\nK('bridgedResource[Members]').load({\n  attributes: ['First Name', 'Last Name','id'],\n  values: {},\n  success: function(bridgedData) {\n    var options=[];\n    $.each( bridgedData, function( key, value ) {\n\t    console.log(value['id']+\"-\"+value['First Name']+\" \"+value['Last Name']);\n\t\t\toptions[options.length]={'label':value['First Name']+\" \"+value['Last Name'], 'value':value['id']};\n\t\t});\n    var label=null;\n debugger;   \n\t\tK('field[Members]').options(options);\n    if ((GetURLParameter(\"id\")!==null && GetURLParameter(\"id\")!==undefined) || !K(\"identity\").teams.includes(\"Role::Program Managers\")) {\n      if (GetURLParameter(\"id\")!==null && GetURLParameter(\"id\")!==undefined) {\n    \t\tK('field[Members]').value(GetURLParameter(\"id\"));\n      }else{\n    \t\tK('field[Members]').value(K('field[Member GUID]').value());\n      }\n      $(K('field[Members]').options()).each(function(index) {\n       if (K('field[Members]').options()[index].value===GetURLParameter(\"id\") || K('field[Members]').options()[index].value===K('field[Member GUID]').value()) {\n        label=K('field[Members]').options()[index].label;\n        }\n      });      \n    }\n    bundle.config.widgets.selectMenu({\n      element: K(\"form\").find(\"#selectMemberMenu\")[0],\n      options: K('field[Members]').options(),\n      onChange: function(option) {\n        K('field[Members]').value(option.value);\n        setTimeout(function(){\n          $(K(\"form\").find(\"#selectMemberMenu .css-1492t68\")).html(option.label);\n        },100);\n      },\n      value: K('field[Members]').value(),\n    });\n    if (label!==null){\n    \t$(K(\"form\").find(\"#selectMemberMenu div\")[3]).html(label);\n    }\n    if (!K('identity').authenticated) {\n      $(K(\"form\").find(\"#selectMemberMenu\")).hide();\n    }\n  }\n});\n\n\nif ($(\".package-layout--services\").length===0) {\n\t$(\"body\").css(\"height\",\"auto\");\n}\nif (GetURLParameter(\"id\")!==undefined) {\n\tK('section[Emailed Message]').show();  \n}\nif (!K(\"identity\").teams.includes(\"Role::Program Managers\")) {\n\tK('section[Select Member]').hide();\n}"
+          "code": "debugger;\nif (bundle.GetURLParameter(\"id\")!==null && bundle.GetURLParameter(\"id\")!==undefined) {\n  K('field[Members]').value(bundle.GetURLParameter(\"id\"));\n  K('field[Member GUID]').value(bundle.GetURLParameter(\"id\"));\n}\n\nif ($(\".package-layout--services\").length===0) {\n\t$(\"body\").css(\"height\",\"auto\");\n}\nif (bundle.GetURLParameter(\"id\")!==undefined) {\n\tK('section[Emailed Message]').show();  \n}\n"
         },
         {
           "name": "Handle Errors",
@@ -886,9 +823,9 @@
         },
         {
           "name": "Clear Styles",
-          "type": "Submit",
+          "type": "Load",
           "action": "Custom",
-          "code": "if ($(\".package-layout--services\").length===0) {\n\t$(\"body\").css(\"height\",\"100%\");\n}"
+          "code": "const hash = window.location.hash;\n\n// Create a URLSearchParams object from the part after '?'\nconst queryString = hash.split('?')[1];\nconst params = new URLSearchParams(queryString);\n\n// Check if \"public\" parameter is present\nif (params.has('public')) {\n  document.body.style.height = \"auto\";\n}\n"
         },
         {
           "name": "Review",
@@ -896,25 +833,59 @@
           "action": "Custom",
           "code": "",
           "runIf": "form('review')"
+        },
+        {
+          "name": "Remove Credit Card option",
+          "type": "Load",
+          "action": "Custom",
+          "code": "debugger;\nconst paymentMethods = K('field[Payment Method]').element()[0];\n\n// Get options\nconst cc = paymentMethods.querySelector('option[value=\"CREDITCARD\"]');\nconst bank = paymentMethods.querySelector('option[value=\"BANKACCOUNT\"]');\n\n// Hide both by removing them\nif (cc) cc.remove();\n\n",
+          "runIf": "space('attribute:PaySmart No Credit Card Allowed')===\"YES\""
         }
       ],
       "name": "Instalment Information",
       "renderType": "submittable",
+      "type": "page"
+    },
+    {
+      "advanceCondition": null,
+      "displayCondition": null,
+      "displayPage": null,
+      "elements": [
+        {
+          "type": "content",
+          "renderType": "html",
+          "name": "GB Logo",
+          "text": "<img src=\"https://gbfms-files.s3-ap-southeast-2.amazonaws.com/GB+Name+Log.png\" alt=\"GB Logo\" class=\"GBLogo\">",
+          "visible": true,
+          "renderAttributes": {}
+        },
+        {
+          "type": "content",
+          "renderType": "text",
+          "name": "Info",
+          "text": "Thank you for updating your Payment Details.",
+          "visible": true,
+          "renderAttributes": {}
+        }
+      ],
+      "events": [],
+      "name": "Thank You",
+      "renderType": "confirmation",
       "type": "page"
     }
   ],
   "securityPolicies": [
     {
       "endpoint": "Display",
-      "name": "PaySmart Authenticated Users"
+      "name": "Everyone"
     },
     {
       "endpoint": "Submission Access",
-      "name": "PaySmart Authenticated Users"
+      "name": "Everyone"
     },
     {
       "endpoint": "Submission Modification",
-      "name": "Program Managers"
+      "name": "Everyone"
     }
   ],
   "slug": "paysmart-change-payment-type",
